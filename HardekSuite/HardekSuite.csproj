@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{697B613A-F6D4-4F74-88B2-E7928C512589}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HardekSuite</RootNamespace>
+    <AssemblyName>HardekSuite</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>Hardek.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="USkinSDK.cs" />
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SplashScreenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SplashScreenForm.Designer.cs">
+      <DependentUpon>SplashScreenForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SplashScreenForm.resx">
+      <DependentUpon>SplashScreenForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Graphics\Icons\Recorte.shs" />
+    <None Include="Graphics\Icons\Thumbs.db" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Graphics\hardekBar.bmp" />
+    <None Include="Skins\areao4.msstyles">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Skins\Azenis2.msstyles">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Skins\Blink.msstyles">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Skins\ClearLooks.msstyles">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Skins\Crystalline.msstyles">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Skins\Gaia09.msstyles">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Skins\Green.msstyles">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Skins\Human.msstyles">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Skins\hydranDB.msstyles">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Skins\invoice.msstyles">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Skins\LeopardXP.msstyles">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Skins\LongXPwm.msstyles">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Skins\MilkVista.msstyles">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Skins\Nion Redux.msstyles">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Skins\orbe.msstyles">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Skins\Pacifica.msstyles">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Skins\RFwdwork.msstyles">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Skins\Shine.msstyles">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Skins\Supreme.msstyles">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Skins\x-port2.msstyles">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Skins\Xenes VS.msstyles">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="Graphics\hardekLayout.bmp" />
+    <Content Include="Graphics\Icons\Blank.ico" />
+    <Content Include="Graphics\Icons\fire.ico" />
+    <Content Include="Graphics\Icons\ghp.bmp" />
+    <Content Include="Graphics\Icons\gmp.bmp" />
+    <Content Include="Graphics\Icons\Great_Health_Potion.gif" />
+    <Content Include="Graphics\Icons\Great_Mana_Potion.gif" />
+    <Content Include="Graphics\Icons\gsp.bmp" />
+    <Content Include="Graphics\Icons\Hardek.bmp" />
+    <Content Include="Graphics\Icons\Hardek.ico" />
+    <Content Include="Graphics\Icons\Heal.ico" />
+    <Content Include="Graphics\Icons\Healing.bmp" />
+    <Content Include="Graphics\Icons\Health_Potion.gif" />
+    <Content Include="Graphics\Icons\hp.bmp" />
+    <Content Include="Graphics\Icons\Hunting.bmp" />
+    <Content Include="Graphics\Icons\Hunting.ico" />
+    <Content Include="Graphics\Icons\ih.bmp" />
+    <Content Include="Graphics\Icons\Keyring.ico" />
+    <Content Include="Graphics\Icons\ManaDrink.bmp" />
+    <Content Include="Graphics\Icons\Mana_Potion.gif" />
+    <Content Include="Graphics\Icons\mp.bmp" />
+    <Content Include="Graphics\Icons\Outfits.bmp" />
+    <Content Include="Graphics\Icons\Potions.bmp" />
+    <Content Include="Graphics\Icons\Potions.ico" />
+    <Content Include="Graphics\Icons\RuneMaker.bmp" />
+    <Content Include="Graphics\Icons\shp.bmp" />
+    <Content Include="Graphics\Icons\smp.bmp" />
+    <Content Include="Graphics\Icons\Spell.ico" />
+    <Content Include="Graphics\Icons\SpellCast.bmp" />
+    <Content Include="Graphics\Icons\Statistics.bmp" />
+    <Content Include="Graphics\Icons\Strong_Health_Potion.gif" />
+    <Content Include="Graphics\Icons\Strong_Mana_Potion.gif" />
+    <Content Include="Graphics\Icons\uh.bmp" />
+    <Content Include="Graphics\Icons\uhp.bmp" />
+    <Content Include="Graphics\Icons\Ultimate_Healing_Rune.gif" />
+    <Content Include="Graphics\Icons\Vis.bmp" />
+    <Content Include="Graphics\Icons\vis.ico" />
+    <Content Include="Graphics\Icons\Warlock.ico" />
+    <Content Include="Hardek.ico" />
+    <None Include="USkin.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\KedrahCore\trunk\kedrahcore\KedrahCore.csproj">
+      <Project>{2AC544A0-7273-45B0-901B-494ED8020DB4}</Project>
+      <Name>KedrahCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\TibiaAPIRepos\trunk\tibiaapi\TibiaAPI.csproj">
+      <Project>{4D132EB7-B97D-461D-85CF-949FF5A7BA96}</Project>
+      <Name>TibiaAPI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
