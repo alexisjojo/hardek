@@ -29,7 +29,7 @@ namespace HardekSuite {
             Application.SetCompatibleTextRenderingDefault(false);
 
             // Instantiate the core object
-            core = new Kedrah.Core("Hardek");
+            core = new Kedrah.Core("Hardek", true);
 
             if (core.Client == null)
                 Environment.Exit(0);
