@@ -39,7 +39,7 @@ namespace HardekSuite {
             splashScreenForm.Show();
             Application.DoEvents();
             for (splashScreenForm.Progress = 0; splashScreenForm.Progress < 100; splashScreenForm.Progress++)
-                System.Threading.Thread.Sleep(3);
+                System.Threading.Thread.Sleep(1);
             splashScreenForm.Close();
 
             // Create the main form

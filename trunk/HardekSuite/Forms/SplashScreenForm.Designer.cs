@@ -76,6 +76,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SplashScreenForm";
+            this.TopMost = true;
             this.TransparencyKey = System.Drawing.Color.Magenta;
             this.Load += new System.EventHandler(this.SplashScreenForm_Load);
             this.ResumeLayout(false);

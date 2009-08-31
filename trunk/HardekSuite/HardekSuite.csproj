@@ -64,7 +64,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="USkinSDK.cs" />
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,7 +86,6 @@
       <DependentUpon>SplashScreenForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -98,125 +96,31 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="Graphics\Icons\Recorte.shs" />
-    <None Include="Graphics\Icons\Thumbs.db" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Graphics\hardekBar.bmp" />
-    <None Include="Skins\areao4.msstyles">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Skins\Azenis2.msstyles">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Skins\Blink.msstyles">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Skins\ClearLooks.msstyles">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Skins\Crystalline.msstyles">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Skins\Gaia09.msstyles">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Skins\Green.msstyles">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Skins\Human.msstyles">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Skins\hydranDB.msstyles">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Skins\invoice.msstyles">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Skins\LeopardXP.msstyles">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Skins\LongXPwm.msstyles">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Skins\MilkVista.msstyles">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Skins\Nion Redux.msstyles">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Skins\orbe.msstyles">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Skins\Pacifica.msstyles">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Skins\RFwdwork.msstyles">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Skins\Shine.msstyles">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Skins\Supreme.msstyles">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Skins\x-port2.msstyles">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Skins\Xenes VS.msstyles">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <Content Include="Graphics\automatic.gif" />
+    <Content Include="Graphics\cavebot.gif" />
+    <Content Include="Graphics\close.gif" />
+    <Content Include="Graphics\commands.gif" />
+    <Content Include="Graphics\context_menu.gif" />
+    <Content Include="Graphics\core.gif" />
+    <Content Include="Graphics\equips.gif" />
+    <Content Include="Graphics\general.gif" />
     <Content Include="Graphics\hardekLayout.bmp" />
-    <Content Include="Graphics\Icons\Blank.ico" />
-    <Content Include="Graphics\Icons\fire.ico" />
-    <Content Include="Graphics\Icons\ghp.bmp" />
-    <Content Include="Graphics\Icons\gmp.bmp" />
-    <Content Include="Graphics\Icons\Great_Health_Potion.gif" />
-    <Content Include="Graphics\Icons\Great_Mana_Potion.gif" />
-    <Content Include="Graphics\Icons\gsp.bmp" />
-    <Content Include="Graphics\Icons\Hardek.bmp" />
-    <Content Include="Graphics\Icons\Hardek.ico" />
-    <Content Include="Graphics\Icons\Heal.ico" />
-    <Content Include="Graphics\Icons\Healing.bmp" />
-    <Content Include="Graphics\Icons\Health_Potion.gif" />
-    <Content Include="Graphics\Icons\hp.bmp" />
-    <Content Include="Graphics\Icons\Hunting.bmp" />
-    <Content Include="Graphics\Icons\Hunting.ico" />
-    <Content Include="Graphics\Icons\ih.bmp" />
-    <Content Include="Graphics\Icons\Keyring.ico" />
-    <Content Include="Graphics\Icons\ManaDrink.bmp" />
-    <Content Include="Graphics\Icons\Mana_Potion.gif" />
-    <Content Include="Graphics\Icons\mp.bmp" />
-    <Content Include="Graphics\Icons\Outfits.bmp" />
-    <Content Include="Graphics\Icons\Potions.bmp" />
-    <Content Include="Graphics\Icons\Potions.ico" />
-    <Content Include="Graphics\Icons\RuneMaker.bmp" />
-    <Content Include="Graphics\Icons\shp.bmp" />
-    <Content Include="Graphics\Icons\smp.bmp" />
-    <Content Include="Graphics\Icons\Spell.ico" />
-    <Content Include="Graphics\Icons\SpellCast.bmp" />
-    <Content Include="Graphics\Icons\Statistics.bmp" />
-    <Content Include="Graphics\Icons\Strong_Health_Potion.gif" />
-    <Content Include="Graphics\Icons\Strong_Mana_Potion.gif" />
-    <Content Include="Graphics\Icons\uh.bmp" />
-    <Content Include="Graphics\Icons\uhp.bmp" />
-    <Content Include="Graphics\Icons\Ultimate_Healing_Rune.gif" />
-    <Content Include="Graphics\Icons\Vis.bmp" />
-    <Content Include="Graphics\Icons\vis.ico" />
-    <Content Include="Graphics\Icons\Warlock.ico" />
+    <Content Include="Graphics\healing.gif" />
+    <Content Include="Graphics\hotkeys.gif" />
+    <Content Include="Graphics\icons.gif" />
+    <Content Include="Graphics\looter.background.gif" />
+    <Content Include="Graphics\looter.gif" />
+    <Content Include="Graphics\maximize.gif" />
+    <Content Include="Graphics\minimize.gif" />
+    <Content Include="Graphics\options.gif" />
+    <Content Include="Graphics\screen_information.gif" />
+    <Content Include="Graphics\security.gif" />
+    <Content Include="Graphics\shortcuts.gif" />
+    <Content Include="Graphics\statistics.gif" />
+    <Content Include="Graphics\targeting.gif" />
     <Content Include="Hardek.ico" />
-    <None Include="USkin.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\KedrahCore\kedrahcore\KedrahCore.csproj">
@@ -227,6 +131,9 @@
       <Project>{4D132EB7-B97D-461D-85CF-949FF5A7BA96}</Project>
       <Name>TibiaAPI</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
