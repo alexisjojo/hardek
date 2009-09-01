@@ -8,8 +8,8 @@ using System.Text;
 using System.Windows.Forms;
 
 namespace HardekSuite.Forms {
-    public partial class SplashScreenForm : Form {
-        public SplashScreenForm() {
+    public partial class uxSplash : Form {
+        public uxSplash() {
             InitializeComponent();
         }
 

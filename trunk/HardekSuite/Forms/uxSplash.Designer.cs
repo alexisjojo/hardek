@@ -1,5 +1,5 @@
 ﻿namespace HardekSuite.Forms {
-    partial class SplashScreenForm {
+    partial class uxSplash {
         /// <summary>
         /// Required designer variable.
         /// </summary>

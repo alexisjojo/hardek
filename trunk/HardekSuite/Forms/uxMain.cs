@@ -8,10 +8,11 @@ using System.Text;
 using System.Windows.Forms;
 
 namespace HardekSuite.Forms {
-    public partial class MainForm : Form {
-        Kedrah.Core core = Program.core;
+    public partial class uxMain : Form {
+        Kedrah.Core Core = Program.Core;
+        private bool close = false;
 
-        public MainForm() {
+        public uxMain() {
             InitializeComponent();
         }
 
@@ -20,33 +21,15 @@ namespace HardekSuite.Forms {
         }
 
         private void ExitMenu_Click(object sender, EventArgs e) {
-            this.Dispose();
+            close = true;
+            Application.Exit();
         }
 
-        private void MainForm_FormClosing(object sender, FormClosingEventArgs e) {
-            e.Cancel = true;
-            this.Hide();
-        }
-
-        private void MainForm_Load(object sender, EventArgs e) {
-            // Create the ToolTip and associate with the Form container.
-            ToolTip toolTip1 = new ToolTip();
-
-            // Set up the delays for the ToolTip.
-            toolTip1.AutoPopDelay = 5000;
-            toolTip1.IsBalloon = true;
-            toolTip1.UseAnimation = true;
-            toolTip1.UseFading = true;
-            toolTip1.InitialDelay = 1000;
-            toolTip1.ReshowDelay = 500;
-            // Force the ToolTip text to be displayed whether or not the form is active.
-            toolTip1.ShowAlways = true;
-            toolTip1.ToolTipIcon = ToolTipIcon.Info;
-            toolTip1.ToolTipTitle = "button info";
-
-            // Set up the ToolTip text for the Button and Checkbox.
-            toolTip1.SetToolTip(this.commandsButton, "My button1");
-            toolTip1.SetToolTip(this.contextButton, "My checkBox1");
+        private void uxMain_FormClosing(object sender, FormClosingEventArgs e) {
+            if (!close) {
+                e.Cancel = true;
+                this.Hide();
+            }
         }
 
         private void toggleShortcuts_Click(object sender, EventArgs e) {
@@ -83,7 +66,7 @@ namespace HardekSuite.Forms {
         }
 
         private void contextButton_Click(object sender, EventArgs e) {
-            core.Client.ContextMenu.AddContextMenu(1, "Kill", Tibia.Constants.ContextMenuType.AllMenus, true);
+            Core.Client.ContextMenu.AddContextMenu(1, "Kill", Tibia.Constants.ContextMenuType.AllMenus, true);
         }
 
         private void toggleSettings_Click(object sender, EventArgs e) {
@@ -98,10 +81,10 @@ namespace HardekSuite.Forms {
         }
 
         private void healingButton_Click(object sender, EventArgs e) {
-            if (Program.healingForm == null)
-                Program.healingForm = new Forms.HealingForm();
+            if (Program.uxHealing == null)
+                Program.uxHealing = new Forms.uxHealing();
 
-            Program.healingForm.Show();
+            Program.uxHealing.Show();
         }
     }
 }

@@ -1,5 +1,5 @@
 ﻿namespace HardekSuite.Forms {
-    partial class MainForm {
+    partial class uxMain {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -24,7 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uxMain));
             this.trayIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.trayContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ExitMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,7 +61,7 @@
             this.tab3 = new System.Windows.Forms.TabPage();
             this.tab4 = new System.Windows.Forms.TabPage();
             this.tab5 = new System.Windows.Forms.TabPage();
-            this.tab6 = new System.Windows.Forms.TabPage();
+            this.tabCustom = new System.Windows.Forms.TabPage();
             this.saveButton = new System.Windows.Forms.Button();
             this.loadButton = new System.Windows.Forms.Button();
             this.toggleSettings = new System.Windows.Forms.PictureBox();
@@ -499,12 +499,12 @@
             this.settingsTab.Controls.Add(this.tab3);
             this.settingsTab.Controls.Add(this.tab4);
             this.settingsTab.Controls.Add(this.tab5);
-            this.settingsTab.Controls.Add(this.tab6);
+            this.settingsTab.Controls.Add(this.tabCustom);
             this.settingsTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.settingsTab.Location = new System.Drawing.Point(1, 1);
             this.settingsTab.Margin = new System.Windows.Forms.Padding(1);
             this.settingsTab.Name = "settingsTab";
-            this.settingsTab.Padding = new System.Drawing.Point(2, 2);
+            this.settingsTab.Padding = new System.Drawing.Point(1, 2);
             this.settingsTab.SelectedIndex = 0;
             this.settingsTab.Size = new System.Drawing.Size(210, 18);
             this.settingsTab.TabIndex = 19;
@@ -559,14 +559,14 @@
             this.tab5.Text = "    5";
             this.tab5.UseVisualStyleBackColor = true;
             // 
-            // tab6
+            // tabCustom
             // 
-            this.tab6.Location = new System.Drawing.Point(4, 20);
-            this.tab6.Name = "tab6";
-            this.tab6.Size = new System.Drawing.Size(202, 0);
-            this.tab6.TabIndex = 5;
-            this.tab6.Text = "    6";
-            this.tab6.UseVisualStyleBackColor = true;
+            this.tabCustom.Location = new System.Drawing.Point(4, 20);
+            this.tabCustom.Name = "tabCustom";
+            this.tabCustom.Size = new System.Drawing.Size(202, 0);
+            this.tabCustom.TabIndex = 5;
+            this.tabCustom.Text = " Custom ";
+            this.tabCustom.UseVisualStyleBackColor = true;
             // 
             // saveButton
             // 
@@ -818,7 +818,7 @@
             this.pasteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.pasteToolStripMenuItem.Text = "&Paste";
             // 
-            // MainForm
+            // uxMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -830,13 +830,12 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "MainForm";
+            this.Name = "uxMain";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hardek Suite";
             this.TopMost = true;
-            this.Load += new System.EventHandler(this.MainForm_Load);
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.uxMain_FormClosing);
             this.trayContextMenu.ResumeLayout(false);
             this.generalPanel.ResumeLayout(false);
             this.generalPanel.PerformLayout();
@@ -937,7 +936,7 @@
         private System.Windows.Forms.TabPage tab3;
         private System.Windows.Forms.TabPage tab4;
         private System.Windows.Forms.TabPage tab5;
-        private System.Windows.Forms.TabPage tab6;
+        private System.Windows.Forms.TabPage tabCustom;
 
 
 
