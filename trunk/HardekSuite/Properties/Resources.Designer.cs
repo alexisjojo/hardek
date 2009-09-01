@@ -60,16 +60,16 @@ namespace HardekSuite.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap automatic {
+        internal static System.Drawing.Bitmap cavebot {
             get {
-                object obj = ResourceManager.GetObject("automatic", resourceCulture);
+                object obj = ResourceManager.GetObject("cavebot", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
-        internal static System.Drawing.Bitmap cavebot {
+        internal static System.Drawing.Bitmap charger {
             get {
-                object obj = ResourceManager.GetObject("cavebot", resourceCulture);
+                object obj = ResourceManager.GetObject("charger", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -88,9 +88,9 @@ namespace HardekSuite.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap context_menu {
+        internal static System.Drawing.Bitmap context {
             get {
-                object obj = ResourceManager.GetObject("context_menu", resourceCulture);
+                object obj = ResourceManager.GetObject("context", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -98,13 +98,6 @@ namespace HardekSuite.Properties {
         internal static System.Drawing.Bitmap core {
             get {
                 object obj = ResourceManager.GetObject("core", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap equips {
-            get {
-                object obj = ResourceManager.GetObject("equips", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -144,6 +137,20 @@ namespace HardekSuite.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap load {
+            get {
+                object obj = ResourceManager.GetObject("load", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap loading {
+            get {
+                object obj = ResourceManager.GetObject("loading", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap looter {
             get {
                 object obj = ResourceManager.GetObject("looter", resourceCulture);
@@ -154,6 +161,13 @@ namespace HardekSuite.Properties {
         internal static System.Drawing.Bitmap looter_background {
             get {
                 object obj = ResourceManager.GetObject("looter_background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap maker {
+            get {
+                object obj = ResourceManager.GetObject("maker", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -172,23 +186,16 @@ namespace HardekSuite.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap options {
+        internal static System.Drawing.Bitmap save {
             get {
-                object obj = ResourceManager.GetObject("options", resourceCulture);
+                object obj = ResourceManager.GetObject("save", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
-        internal static System.Drawing.Bitmap screen_information {
+        internal static System.Drawing.Bitmap settings {
             get {
-                object obj = ResourceManager.GetObject("screen_information", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap security {
-            get {
-                object obj = ResourceManager.GetObject("security", resourceCulture);
+                object obj = ResourceManager.GetObject("settings", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -210,6 +217,13 @@ namespace HardekSuite.Properties {
         internal static System.Drawing.Bitmap targeting {
             get {
                 object obj = ResourceManager.GetObject("targeting", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap tools {
+            get {
+                object obj = ResourceManager.GetObject("tools", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

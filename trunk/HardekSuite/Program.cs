@@ -21,6 +21,11 @@ namespace HardekSuite {
         static private Forms.SplashScreenForm splashScreenForm;
 
         /// <summary>
+        /// Instance of the healing form.
+        /// </summary>
+        static public Forms.HealingForm healingForm;
+
+        /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
@@ -37,9 +42,12 @@ namespace HardekSuite {
             // Show splash screen
             splashScreenForm = new Forms.SplashScreenForm();
             splashScreenForm.Show();
-            Application.DoEvents();
-            for (splashScreenForm.Progress = 0; splashScreenForm.Progress < 100; splashScreenForm.Progress++)
-                System.Threading.Thread.Sleep(1);
+
+            for (int i = 0; i < 100; i++) {
+                Application.DoEvents();
+                System.Threading.Thread.Sleep(5);
+            }
+
             splashScreenForm.Close();
 
             // Create the main form

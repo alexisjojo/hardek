@@ -13,17 +13,8 @@ namespace HardekSuite.Forms {
             InitializeComponent();
         }
 
-        public int Progress {
-            get {
-                return progressBar.Value;
-            }
-            set {
-                progressBar.Value = value;
-            }
-        }
-
         private void SplashScreenForm_Load(object sender, EventArgs e) {
-            versionLabel.Text = new Version(Application.ProductVersion).Major + "." + new Version(Application.ProductVersion).Minor;
+            //versionLabel.Text = new Version(Application.ProductVersion).Major + "." + new Version(Application.ProductVersion).Minor;
             System.Drawing.Bitmap Img = (Bitmap)this.BackgroundImage;
             Color color = Img.GetPixel(0, 0);
             Img.MakeTransparent(color);

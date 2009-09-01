@@ -64,6 +64,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\HealingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HealingForm.Designer.cs">
+      <DependentUpon>HealingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\HealingForm.resx">
+      <DependentUpon>HealingForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -98,13 +107,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Graphics\automatic.gif" />
+    <Content Include="Graphics\load.gif" />
+    <Content Include="Graphics\loading.gif" />
+    <Content Include="Graphics\maker.gif" />
     <Content Include="Graphics\cavebot.gif" />
     <Content Include="Graphics\close.gif" />
     <Content Include="Graphics\commands.gif" />
-    <Content Include="Graphics\context_menu.gif" />
+    <Content Include="Graphics\context.gif" />
     <Content Include="Graphics\core.gif" />
-    <Content Include="Graphics\equips.gif" />
+    <Content Include="Graphics\charger.gif" />
     <Content Include="Graphics\general.gif" />
     <Content Include="Graphics\hardekLayout.bmp" />
     <Content Include="Graphics\healing.gif" />
@@ -114,9 +125,9 @@
     <Content Include="Graphics\looter.gif" />
     <Content Include="Graphics\maximize.gif" />
     <Content Include="Graphics\minimize.gif" />
-    <Content Include="Graphics\options.gif" />
-    <Content Include="Graphics\screen_information.gif" />
-    <Content Include="Graphics\security.gif" />
+    <Content Include="Graphics\save.gif" />
+    <Content Include="Graphics\settings.gif" />
+    <Content Include="Graphics\tools.gif" />
     <Content Include="Graphics\shortcuts.gif" />
     <Content Include="Graphics\statistics.gif" />
     <Content Include="Graphics\targeting.gif" />
@@ -131,9 +142,6 @@
       <Project>{4D132EB7-B97D-461D-85CF-949FF5A7BA96}</Project>
       <Name>TibiaAPI</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
