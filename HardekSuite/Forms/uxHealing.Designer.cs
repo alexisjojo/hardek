@@ -1,5 +1,5 @@
 ﻿namespace HardekSuite.Forms {
-    partial class HealingForm {
+    partial class uxHealing {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -24,7 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HealingForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uxHealing));
             this.healingPercent = new System.Windows.Forms.ProgressBar();
             this.potionExhaustionText = new System.Windows.Forms.TextBox();
             this.potionExhaustionLabel = new System.Windows.Forms.Label();
@@ -297,7 +297,7 @@
             this.addHealthButton.UseVisualStyleBackColor = true;
             this.addHealthButton.Click += new System.EventHandler(this.addHealthButton_Click);
             // 
-            // HealingForm
+            // uxHealing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -315,7 +315,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "HealingForm";
+            this.Name = "uxHealing";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Healing";

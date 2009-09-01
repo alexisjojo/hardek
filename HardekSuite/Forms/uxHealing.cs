@@ -8,10 +8,10 @@ using System.Text;
 using System.Windows.Forms;
 
 namespace HardekSuite.Forms {
-    public partial class HealingForm : Form {
+    public partial class uxHealing : Form {
         private bool dragging = false;
 
-        public HealingForm() {
+        public uxHealing() {
             InitializeComponent();
         }
 
