@@ -46,7 +46,7 @@ namespace HardekSuite.Forms {
 
             // Set up the ToolTip text for the Button and Checkbox.
             toolTip1.SetToolTip(this.commandsButton, "My button1");
-            toolTip1.SetToolTip(this.contextMenuButton, "My checkBox1");
+            toolTip1.SetToolTip(this.contextButton, "My checkBox1");
         }
 
         private void toggleShortcuts_Click(object sender, EventArgs e) {
@@ -80,6 +80,28 @@ namespace HardekSuite.Forms {
                 toggleCore.Image = (Image)HardekSuite.Properties.Resources.minimize;
                 coreGroup.Show();
             }
+        }
+
+        private void contextButton_Click(object sender, EventArgs e) {
+            core.Client.ContextMenu.AddContextMenu(1, "Kill", Tibia.Constants.ContextMenuType.AllMenus, true);
+        }
+
+        private void toggleSettings_Click(object sender, EventArgs e) {
+            if (settingsGroup.Visible) {
+                toggleSettings.Image = (Image)HardekSuite.Properties.Resources.maximize;
+                settingsGroup.Hide();
+            }
+            else {
+                toggleSettings.Image = (Image)HardekSuite.Properties.Resources.minimize;
+                settingsGroup.Show();
+            }
+        }
+
+        private void healingButton_Click(object sender, EventArgs e) {
+            if (Program.healingForm == null)
+                Program.healingForm = new Forms.HealingForm();
+
+            Program.healingForm.Show();
         }
     }
 }
