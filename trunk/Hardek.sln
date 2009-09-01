@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual C# Express 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HardekSuite", "HardekSuite\HardekSuite.csproj", "{697B613A-F6D4-4F74-88B2-E7928C512589}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TibiaAPI", "..\Tibia API\TibiaAPI.csproj", "{4D132EB7-B97D-461D-85CF-949FF5A7BA96}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TibiaAPI", "..\TibiaAPI\tibiaapi\TibiaAPI.csproj", "{4D132EB7-B97D-461D-85CF-949FF5A7BA96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KedrahCore", "..\Kedrah Core\kedrahcore\KedrahCore.csproj", "{2AC544A0-7273-45B0-901B-494ED8020DB4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KedrahCore", "..\KedrahCore\kedrahcore\KedrahCore.csproj", "{2AC544A0-7273-45B0-901B-494ED8020DB4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

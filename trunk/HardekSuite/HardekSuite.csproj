@@ -149,11 +149,11 @@
     <Content Include="Graphics\targeting.gif" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Kedrah Core\kedrahcore\KedrahCore.csproj">
+    <ProjectReference Include="..\..\KedrahCore\kedrahcore\KedrahCore.csproj">
       <Project>{2AC544A0-7273-45B0-901B-494ED8020DB4}</Project>
       <Name>KedrahCore</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Tibia API\TibiaAPI.csproj">
+    <ProjectReference Include="..\..\TibiaAPI\tibiaapi\TibiaAPI.csproj">
       <Project>{4D132EB7-B97D-461D-85CF-949FF5A7BA96}</Project>
       <Name>TibiaAPI</Name>
     </ProjectReference>

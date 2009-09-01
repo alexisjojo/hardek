@@ -61,7 +61,7 @@
             this.healingPercent.ForeColor = System.Drawing.Color.Green;
             this.healingPercent.Location = new System.Drawing.Point(12, 118);
             this.healingPercent.Name = "healingPercent";
-            this.healingPercent.Size = new System.Drawing.Size(399, 19);
+            this.healingPercent.Size = new System.Drawing.Size(399, 16);
             this.healingPercent.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.healingPercent.TabIndex = 1;
             this.healingPercent.Value = 50;
@@ -169,7 +169,7 @@
             this.itemToolStripMenuItem,
             this.spellToolStripMenuItem});
             this.addHealthMenu.Name = "addHealthMenu";
-            this.addHealthMenu.Size = new System.Drawing.Size(153, 70);
+            this.addHealthMenu.Size = new System.Drawing.Size(108, 48);
             // 
             // itemToolStripMenuItem
             // 
@@ -183,7 +183,7 @@
             this.ultimateHealthPotionToolStripMenuItem,
             this.greatSpiritPotionToolStripMenuItem});
             this.itemToolStripMenuItem.Name = "itemToolStripMenuItem";
-            this.itemToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.itemToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.itemToolStripMenuItem.Text = "Item";
             // 
             // ultimateHealingRuneToolStripMenuItem
@@ -264,7 +264,7 @@
             this.spellHealth,
             this.addToolStripMenuItem});
             this.spellToolStripMenuItem.Name = "spellToolStripMenuItem";
-            this.spellToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.spellToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.spellToolStripMenuItem.Text = "Spell";
             // 
             // spellHealth
