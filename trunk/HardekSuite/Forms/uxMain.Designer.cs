@@ -295,7 +295,6 @@
             this.contextButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.contextButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.contextButton.UseVisualStyleBackColor = true;
-            this.contextButton.Click += new System.EventHandler(this.contextButton_Click);
             // 
             // iconsButton
             // 
