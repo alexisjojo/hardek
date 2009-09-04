@@ -65,10 +65,6 @@ namespace HardekSuite.Forms {
             }
         }
 
-        private void contextButton_Click(object sender, EventArgs e) {
-            Core.Client.ContextMenu.AddContextMenu(1, "Kill", Tibia.Constants.ContextMenuType.AllMenus, true);
-        }
-
         private void toggleSettings_Click(object sender, EventArgs e) {
             if (settingsGroup.Visible) {
                 toggleSettings.Image = (Image)HardekSuite.Properties.Resources.maximize;

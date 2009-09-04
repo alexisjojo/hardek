@@ -12,8 +12,7 @@
     <AssemblyName>HardekSuite</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <ApplicationIcon>
-    </ApplicationIcon>
+    <ApplicationIcon>Hardek.ico</ApplicationIcon>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -137,6 +136,7 @@
     <Content Include="Graphics\shortcuts.gif" />
     <Content Include="Graphics\statistics.gif" />
     <Content Include="Graphics\targeting.gif" />
+    <Content Include="Hardek.ico" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\KedrahCore\kedrahcore\KedrahCore.csproj">
