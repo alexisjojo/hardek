@@ -12,8 +12,8 @@ namespace HardekSuite {
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
-            Core = new Kedrah.Core("Hardek", "Hardek", false);
+            
+            Core = new Kedrah.Core("Hardek", "Hardek", true, false);
 
             if (Core.Client == null)
                 Environment.Exit(0);
