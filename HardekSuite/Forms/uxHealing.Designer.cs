@@ -47,6 +47,7 @@
             this.greatSpiritPotionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.spellToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.spellHealth = new System.Windows.Forms.ToolStripTextBox();
+            this.manaSpellHealth = new System.Windows.Forms.ToolStripTextBox();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addHealthButton = new System.Windows.Forms.Button();
             this.splitLists.Panel1.SuspendLayout();
@@ -76,6 +77,7 @@
             this.potionExhaustionText.Size = new System.Drawing.Size(53, 20);
             this.potionExhaustionText.TabIndex = 2;
             this.potionExhaustionText.Text = "700";
+            this.potionExhaustionText.TextChanged += new System.EventHandler(this.potionExhaustionText_TextChanged);
             this.potionExhaustionText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.potionExhaustionText_KeyPress);
             // 
             // potionExhaustionLabel
@@ -86,6 +88,7 @@
             this.potionExhaustionLabel.Size = new System.Drawing.Size(95, 13);
             this.potionExhaustionLabel.TabIndex = 3;
             this.potionExhaustionLabel.Text = "Potion Exhaustion:";
+            this.potionExhaustionLabel.Click += new System.EventHandler(this.potionExhaustionLabel_Click);
             // 
             // spellExhaustionLabel
             // 
@@ -103,6 +106,7 @@
             this.spellExhaustionText.Size = new System.Drawing.Size(53, 20);
             this.spellExhaustionText.TabIndex = 4;
             this.spellExhaustionText.Text = "1080";
+            this.spellExhaustionText.TextChanged += new System.EventHandler(this.spellExhaustionText_TextChanged);
             this.spellExhaustionText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.potionExhaustionText_KeyPress);
             // 
             // paralyzeCheck
@@ -262,6 +266,7 @@
             // 
             this.spellToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.spellHealth,
+            this.manaSpellHealth,
             this.addToolStripMenuItem});
             this.spellToolStripMenuItem.Name = "spellToolStripMenuItem";
             this.spellToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
@@ -277,6 +282,19 @@
             this.spellHealth.Leave += new System.EventHandler(this.spellHealth_Leave);
             this.spellHealth.Enter += new System.EventHandler(this.spellHealth_Enter);
             this.spellHealth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.spellHealth_KeyPress);
+            this.spellHealth.Click += new System.EventHandler(this.spellHealth_Click);
+            // 
+            // manaSpellHealth
+            // 
+            this.manaSpellHealth.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.manaSpellHealth.Name = "manaSpellHealth";
+            this.manaSpellHealth.Size = new System.Drawing.Size(100, 21);
+            this.manaSpellHealth.Tag = "Mana Cost";
+            this.manaSpellHealth.Text = "Mana Cost";
+            this.manaSpellHealth.Leave += new System.EventHandler(this.spellHealth_Leave);
+            this.manaSpellHealth.Enter += new System.EventHandler(this.spellHealth_Enter);
+            this.manaSpellHealth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.manaSpellHealth_KeyPress);
+            this.manaSpellHealth.Click += new System.EventHandler(this.manaSpellHealth_Click);
             // 
             // addToolStripMenuItem
             // 
@@ -356,5 +374,6 @@
         private System.Windows.Forms.ToolStripTextBox spellHealth;
         private System.Windows.Forms.Button addHealthButton;
         private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
+        private System.Windows.Forms.ToolStripTextBox manaSpellHealth;
     }
 }
