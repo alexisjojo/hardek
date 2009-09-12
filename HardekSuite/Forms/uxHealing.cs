@@ -120,12 +120,12 @@ namespace HardekSuite.Forms
 
             if (item != null)
             {
-                uxManaList.Items.Add(s.Text + "\t" + uxPercent.Value + "%");
                 Core.Modules.Heal.PotionMana.Add(new HealPercent((byte)uxPercent.Value, item));
+                addToUxList(item.Name, uxPercent.Value, ref uxManaList);
             }
             else
             {
-                System.Windows.MessageBox.Show("Invalids arguments");
+                System.Windows.MessageBox.Show("Invalids parameters.", "Error", System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Exclamation);
             }
         }
 
@@ -142,7 +142,7 @@ namespace HardekSuite.Forms
                 }
                 else
                 {
-                    System.Windows.MessageBox.Show("Invalids arguments");
+                    System.Windows.MessageBox.Show("Invalids parameters.", "Error", System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Exclamation);
                 }
             }
             else
@@ -165,11 +165,11 @@ namespace HardekSuite.Forms
 
                 if (item == null)
                 {
-                    System.Windows.MessageBox.Show("Invalids arguments");
+                    System.Windows.MessageBox.Show("Invalids parameters.", "Error", System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Exclamation);
                 }
                 else
                 {
-                    addToUxList(s.Text, uxPercent.Value, ref uxHealthList);
+                    addToUxList(item.Name, uxPercent.Value, ref uxHealthList);
                 }
             }
         }
@@ -242,7 +242,21 @@ namespace HardekSuite.Forms
 
         private void uxHealthDelete_Click(object sender, EventArgs e)
         {
+            foreach (string item in uxHealthList.SelectedItems)
+            {
+                if (!Core.Modules.Heal.SpellLife.Remove(Core.Modules.Heal.SpellLife.FirstOrDefault(i => item.Contains(i.Spell))))
+                {
+                    if (!Core.Modules.Heal.RuneLife.Remove(Core.Modules.Heal.RuneLife.FirstOrDefault(i => item.Contains(i.Item.Name))))
+                    {
+                        Core.Modules.Heal.PotionLife.Remove(Core.Modules.Heal.PotionLife.FirstOrDefault(i => item.Contains(i.Item.Name)));
+                    }
+                }
+            }
 
+            while (uxHealthList.SelectedItem != null)
+            {
+                uxHealthList.Items.RemoveAt(uxHealthList.SelectedIndex);
+            }
         }
 
         private void uxEnable_CheckedChanged(object sender, EventArgs e)
@@ -254,6 +268,19 @@ namespace HardekSuite.Forms
 
             uxEnable.Enabled = true;
             Core.Modules.Heal.Healer = uxEnable.Checked;
+        }
+
+        private void uxManaDelete_Click(object sender, EventArgs e)
+        {
+            foreach (string item in uxManaList.SelectedItems)
+            {
+                Core.Modules.Heal.PotionMana.Remove(Core.Modules.Heal.PotionMana.FirstOrDefault(i => item.Contains(i.Item.Name)));
+            }
+
+            while (uxManaList.SelectedItem != null)
+            {
+                uxManaList.Items.RemoveAt(uxManaList.SelectedIndex);
+            }
         }
     }
 }
