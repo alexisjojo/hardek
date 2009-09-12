@@ -145,7 +145,7 @@
             // splitLists.Panel2
             // 
             this.splitLists.Panel2.Controls.Add(this.uxManaList);
-            this.splitLists.Size = new System.Drawing.Size(400, 203);
+            this.splitLists.Size = new System.Drawing.Size(400, 154);
             this.splitLists.SplitterDistance = 200;
             this.splitLists.TabIndex = 8;
             // 
@@ -155,7 +155,9 @@
             this.uxHealthList.FormattingEnabled = true;
             this.uxHealthList.Location = new System.Drawing.Point(0, 0);
             this.uxHealthList.Name = "uxHealthList";
-            this.uxHealthList.Size = new System.Drawing.Size(200, 199);
+            this.uxHealthList.ScrollAlwaysVisible = true;
+            this.uxHealthList.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.uxHealthList.Size = new System.Drawing.Size(200, 147);
             this.uxHealthList.Sorted = true;
             this.uxHealthList.TabIndex = 0;
             // 
@@ -165,7 +167,9 @@
             this.uxManaList.FormattingEnabled = true;
             this.uxManaList.Location = new System.Drawing.Point(0, 0);
             this.uxManaList.Name = "uxManaList";
-            this.uxManaList.Size = new System.Drawing.Size(194, 199);
+            this.uxManaList.ScrollAlwaysVisible = true;
+            this.uxManaList.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.uxManaList.Size = new System.Drawing.Size(194, 147);
             this.uxManaList.Sorted = true;
             this.uxManaList.TabIndex = 1;
             // 
@@ -277,6 +281,7 @@
             // 
             // uxSpellWords
             // 
+            this.uxSpellWords.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.uxSpellWords.ForeColor = System.Drawing.SystemColors.GrayText;
             this.uxSpellWords.Name = "uxSpellWords";
             this.uxSpellWords.Size = new System.Drawing.Size(100, 21);
@@ -288,6 +293,7 @@
             // 
             // uxSpellMana
             // 
+            this.uxSpellMana.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.uxSpellMana.ForeColor = System.Drawing.SystemColors.GrayText;
             this.uxSpellMana.Name = "uxSpellMana";
             this.uxSpellMana.Size = new System.Drawing.Size(100, 21);
@@ -310,9 +316,9 @@
             // 
             this.uxHealthAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uxHealthAdd.ForeColor = System.Drawing.Color.Firebrick;
-            this.uxHealthAdd.Location = new System.Drawing.Point(14, 234);
+            this.uxHealthAdd.Location = new System.Drawing.Point(13, 185);
             this.uxHealthAdd.Name = "uxHealthAdd";
-            this.uxHealthAdd.Size = new System.Drawing.Size(84, 23);
+            this.uxHealthAdd.Size = new System.Drawing.Size(82, 23);
             this.uxHealthAdd.TabIndex = 10;
             this.uxHealthAdd.Text = "Add Health";
             this.uxHealthAdd.UseVisualStyleBackColor = true;
@@ -321,9 +327,9 @@
             // uxPercent
             // 
             this.uxPercent.LargeChange = 5;
-            this.uxPercent.Location = new System.Drawing.Point(14, 218);
+            this.uxPercent.Location = new System.Drawing.Point(13, 169);
             this.uxPercent.Name = "uxPercent";
-            this.uxPercent.Size = new System.Drawing.Size(398, 13);
+            this.uxPercent.Size = new System.Drawing.Size(400, 13);
             this.uxPercent.TabIndex = 1;
             this.uxPercent.Value = 50;
             this.uxPercent.Scroll += new System.Windows.Forms.ScrollEventHandler(this.uxPercent_Scroll);
@@ -332,9 +338,9 @@
             // 
             this.uxManaAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uxManaAdd.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.uxManaAdd.Location = new System.Drawing.Point(238, 234);
+            this.uxManaAdd.Location = new System.Drawing.Point(243, 185);
             this.uxManaAdd.Name = "uxManaAdd";
-            this.uxManaAdd.Size = new System.Drawing.Size(84, 23);
+            this.uxManaAdd.Size = new System.Drawing.Size(82, 23);
             this.uxManaAdd.TabIndex = 11;
             this.uxManaAdd.Text = "Add Mana";
             this.uxManaAdd.UseVisualStyleBackColor = true;
@@ -355,7 +361,7 @@
             this.uxGreatManaPotion,
             this.uxManaSpiritPotion});
             this.uxItemMana.Name = "uxItemMana";
-            this.uxItemMana.Size = new System.Drawing.Size(107, 22);
+            this.uxItemMana.Size = new System.Drawing.Size(152, 22);
             this.uxItemMana.Text = "Item";
             // 
             // uxManaPotion
@@ -383,7 +389,6 @@
             this.uxGreatManaPotion.Name = "uxGreatManaPotion";
             this.uxGreatManaPotion.Size = new System.Drawing.Size(195, 38);
             this.uxGreatManaPotion.Text = "Great Mana Potion";
-            this.uxGreatManaPotion.Visible = false;
             this.uxGreatManaPotion.Click += new System.EventHandler(this.addMana);
             // 
             // uxManaSpiritPotion
@@ -398,7 +403,7 @@
             // uxLabelPercent
             // 
             this.uxLabelPercent.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxLabelPercent.Location = new System.Drawing.Point(190, 234);
+            this.uxLabelPercent.Location = new System.Drawing.Point(190, 185);
             this.uxLabelPercent.Name = "uxLabelPercent";
             this.uxLabelPercent.Size = new System.Drawing.Size(46, 23);
             this.uxLabelPercent.TabIndex = 12;
@@ -413,7 +418,7 @@
             this.uxOptions.Controls.Add(this.paralyzeCheck);
             this.uxOptions.Controls.Add(this.spellExhaustionText);
             this.uxOptions.Controls.Add(this.potionExhaustionText);
-            this.uxOptions.Location = new System.Drawing.Point(14, 263);
+            this.uxOptions.Location = new System.Drawing.Point(14, 214);
             this.uxOptions.Name = "uxOptions";
             this.uxOptions.Size = new System.Drawing.Size(308, 66);
             this.uxOptions.TabIndex = 13;
@@ -424,9 +429,9 @@
             // 
             this.uxHealthDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uxHealthDelete.ForeColor = System.Drawing.Color.Firebrick;
-            this.uxHealthDelete.Location = new System.Drawing.Point(104, 234);
+            this.uxHealthDelete.Location = new System.Drawing.Point(101, 185);
             this.uxHealthDelete.Name = "uxHealthDelete";
-            this.uxHealthDelete.Size = new System.Drawing.Size(84, 23);
+            this.uxHealthDelete.Size = new System.Drawing.Size(82, 23);
             this.uxHealthDelete.TabIndex = 14;
             this.uxHealthDelete.Text = "Delete Health";
             this.uxHealthDelete.UseVisualStyleBackColor = true;
@@ -436,18 +441,19 @@
             // 
             this.uxManaDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uxManaDelete.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.uxManaDelete.Location = new System.Drawing.Point(328, 234);
+            this.uxManaDelete.Location = new System.Drawing.Point(331, 185);
             this.uxManaDelete.Name = "uxManaDelete";
-            this.uxManaDelete.Size = new System.Drawing.Size(84, 23);
+            this.uxManaDelete.Size = new System.Drawing.Size(82, 23);
             this.uxManaDelete.TabIndex = 15;
             this.uxManaDelete.Text = "Delete Mana";
             this.uxManaDelete.UseVisualStyleBackColor = true;
+            this.uxManaDelete.Click += new System.EventHandler(this.uxManaDelete_Click);
             // 
             // uxEnable
             // 
             this.uxEnable.AutoSize = true;
             this.uxEnable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxEnable.Location = new System.Drawing.Point(342, 309);
+            this.uxEnable.Location = new System.Drawing.Point(341, 260);
             this.uxEnable.Name = "uxEnable";
             this.uxEnable.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.uxEnable.Size = new System.Drawing.Size(70, 20);
@@ -460,16 +466,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(423, 341);
-            this.Controls.Add(this.uxEnable);
-            this.Controls.Add(this.uxManaDelete);
-            this.Controls.Add(this.uxHealthDelete);
-            this.Controls.Add(this.uxLabelPercent);
+            this.ClientSize = new System.Drawing.Size(423, 289);
             this.Controls.Add(this.splitLists);
             this.Controls.Add(this.uxPercent);
-            this.Controls.Add(this.uxManaAdd);
-            this.Controls.Add(this.uxOptions);
+            this.Controls.Add(this.uxEnable);
+            this.Controls.Add(this.uxHealthDelete);
+            this.Controls.Add(this.uxManaDelete);
             this.Controls.Add(this.uxHealthAdd);
+            this.Controls.Add(this.uxManaAdd);
+            this.Controls.Add(this.uxLabelPercent);
+            this.Controls.Add(this.uxOptions);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
