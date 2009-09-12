@@ -25,47 +25,47 @@
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uxMain));
-            this.trayIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.uxTray = new System.Windows.Forms.NotifyIcon(this.components);
             this.trayContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ExitMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.generalPanel = new System.Windows.Forms.Panel();
-            this.generalGroup = new System.Windows.Forms.FlowLayoutPanel();
-            this.statisticsButton = new System.Windows.Forms.Button();
-            this.toolsButton = new System.Windows.Forms.Button();
-            this.toggleGeneral = new System.Windows.Forms.PictureBox();
-            this.generalPicture = new System.Windows.Forms.PictureBox();
-            this.bigflow = new System.Windows.Forms.FlowLayoutPanel();
-            this.shortCutsPanel = new System.Windows.Forms.Panel();
-            this.shortCutsGroup = new System.Windows.Forms.FlowLayoutPanel();
-            this.commandsButton = new System.Windows.Forms.Button();
-            this.hotkeysButton = new System.Windows.Forms.Button();
-            this.contextButton = new System.Windows.Forms.Button();
-            this.iconsButton = new System.Windows.Forms.Button();
-            this.toggleShortcuts = new System.Windows.Forms.PictureBox();
-            this.shortCutsPicture = new System.Windows.Forms.PictureBox();
-            this.corePanel = new System.Windows.Forms.Panel();
-            this.coreGroup = new System.Windows.Forms.FlowLayoutPanel();
-            this.healingButton = new System.Windows.Forms.Button();
-            this.chargerButton = new System.Windows.Forms.Button();
-            this.cavebotButton = new System.Windows.Forms.Button();
-            this.targetingButton = new System.Windows.Forms.Button();
-            this.looterButton = new System.Windows.Forms.Button();
-            this.makerButton = new System.Windows.Forms.Button();
-            this.toggleCore = new System.Windows.Forms.PictureBox();
-            this.corePicture = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.settingsGroup = new System.Windows.Forms.FlowLayoutPanel();
-            this.settingsTab = new System.Windows.Forms.TabControl();
-            this.tab1 = new System.Windows.Forms.TabPage();
-            this.tab2 = new System.Windows.Forms.TabPage();
-            this.tab3 = new System.Windows.Forms.TabPage();
-            this.tab4 = new System.Windows.Forms.TabPage();
-            this.tab5 = new System.Windows.Forms.TabPage();
-            this.tabCustom = new System.Windows.Forms.TabPage();
-            this.saveButton = new System.Windows.Forms.Button();
-            this.loadButton = new System.Windows.Forms.Button();
-            this.toggleSettings = new System.Windows.Forms.PictureBox();
-            this.settingsPicture = new System.Windows.Forms.PictureBox();
+            this.uxGeneralPanel = new System.Windows.Forms.Panel();
+            this.uxGeneralGroup = new System.Windows.Forms.FlowLayoutPanel();
+            this.uxStatisticsButton = new System.Windows.Forms.Button();
+            this.uxToolsButton = new System.Windows.Forms.Button();
+            this.uxToggleGeneral = new System.Windows.Forms.PictureBox();
+            this.uxGeneralPicture = new System.Windows.Forms.PictureBox();
+            this.uxBigflow = new System.Windows.Forms.FlowLayoutPanel();
+            this.uxShortcutsPanel = new System.Windows.Forms.Panel();
+            this.uxShortcutsGroup = new System.Windows.Forms.FlowLayoutPanel();
+            this.uxCommandsButton = new System.Windows.Forms.Button();
+            this.uxHotkeysButton = new System.Windows.Forms.Button();
+            this.uxContextButton = new System.Windows.Forms.Button();
+            this.uxIconsButton = new System.Windows.Forms.Button();
+            this.uxToggleShortcuts = new System.Windows.Forms.PictureBox();
+            this.uxShortcutsPicture = new System.Windows.Forms.PictureBox();
+            this.uxCorePanel = new System.Windows.Forms.Panel();
+            this.uxCoreGroup = new System.Windows.Forms.FlowLayoutPanel();
+            this.uxHealingButton = new System.Windows.Forms.Button();
+            this.uxChargerButton = new System.Windows.Forms.Button();
+            this.uxCavebotButton = new System.Windows.Forms.Button();
+            this.uxTargetingButton = new System.Windows.Forms.Button();
+            this.uxLooterButton = new System.Windows.Forms.Button();
+            this.uxMakerButton = new System.Windows.Forms.Button();
+            this.uxToggleCore = new System.Windows.Forms.PictureBox();
+            this.uxCorePicture = new System.Windows.Forms.PictureBox();
+            this.uxMainPanel = new System.Windows.Forms.Panel();
+            this.uxSettingsGroup = new System.Windows.Forms.FlowLayoutPanel();
+            this.uxSettingsTab = new System.Windows.Forms.TabControl();
+            this.uxTab1 = new System.Windows.Forms.TabPage();
+            this.uxTab2 = new System.Windows.Forms.TabPage();
+            this.uxTab3 = new System.Windows.Forms.TabPage();
+            this.uxTab4 = new System.Windows.Forms.TabPage();
+            this.uxTab5 = new System.Windows.Forms.TabPage();
+            this.uxTabCustom = new System.Windows.Forms.TabPage();
+            this.uxSaveButton = new System.Windows.Forms.Button();
+            this.uxLoadButton = new System.Windows.Forms.Button();
+            this.uxToggleSettings = new System.Windows.Forms.PictureBox();
+            this.uxSettingsPicture = new System.Windows.Forms.PictureBox();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -96,33 +96,33 @@
             this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trayContextMenu.SuspendLayout();
-            this.generalPanel.SuspendLayout();
-            this.generalGroup.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.toggleGeneral)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.generalPicture)).BeginInit();
-            this.bigflow.SuspendLayout();
-            this.shortCutsPanel.SuspendLayout();
-            this.shortCutsGroup.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.toggleShortcuts)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shortCutsPicture)).BeginInit();
-            this.corePanel.SuspendLayout();
-            this.coreGroup.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.toggleCore)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.corePicture)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.settingsGroup.SuspendLayout();
-            this.settingsTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.toggleSettings)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.settingsPicture)).BeginInit();
+            this.uxGeneralPanel.SuspendLayout();
+            this.uxGeneralGroup.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.uxToggleGeneral)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uxGeneralPicture)).BeginInit();
+            this.uxBigflow.SuspendLayout();
+            this.uxShortcutsPanel.SuspendLayout();
+            this.uxShortcutsGroup.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.uxToggleShortcuts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uxShortcutsPicture)).BeginInit();
+            this.uxCorePanel.SuspendLayout();
+            this.uxCoreGroup.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.uxToggleCore)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uxCorePicture)).BeginInit();
+            this.uxMainPanel.SuspendLayout();
+            this.uxSettingsGroup.SuspendLayout();
+            this.uxSettingsTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.uxToggleSettings)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uxSettingsPicture)).BeginInit();
             this.SuspendLayout();
             // 
-            // trayIcon
+            // uxTray
             // 
-            this.trayIcon.ContextMenuStrip = this.trayContextMenu;
-            this.trayIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("trayIcon.Icon")));
-            this.trayIcon.Text = "Hardek Suite";
-            this.trayIcon.Visible = true;
-            this.trayIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.trayIcon_MouseDoubleClick);
+            this.uxTray.ContextMenuStrip = this.trayContextMenu;
+            this.uxTray.Icon = ((System.Drawing.Icon)(resources.GetObject("uxTray.Icon")));
+            this.uxTray.Text = "Hardek Suite";
+            this.uxTray.Visible = true;
+            this.uxTray.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.trayIcon_MouseDoubleClick);
             // 
             // trayContextMenu
             // 
@@ -140,480 +140,482 @@
             this.ExitMenu.Text = "Exit";
             this.ExitMenu.Click += new System.EventHandler(this.ExitMenu_Click);
             // 
-            // generalPanel
-            // 
-            this.generalPanel.AutoSize = true;
-            this.generalPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.generalPanel.Controls.Add(this.generalGroup);
-            this.generalPanel.Controls.Add(this.toggleGeneral);
-            this.generalPanel.Controls.Add(this.generalPicture);
-            this.generalPanel.Location = new System.Drawing.Point(0, 0);
-            this.generalPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.generalPanel.Name = "generalPanel";
-            this.generalPanel.Size = new System.Drawing.Size(216, 86);
-            this.generalPanel.TabIndex = 15;
-            // 
-            // generalGroup
-            // 
-            this.generalGroup.AutoSize = true;
-            this.generalGroup.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.generalGroup.Controls.Add(this.statisticsButton);
-            this.generalGroup.Controls.Add(this.toolsButton);
-            this.generalGroup.Location = new System.Drawing.Point(3, 37);
-            this.generalGroup.MaximumSize = new System.Drawing.Size(210, 0);
-            this.generalGroup.MinimumSize = new System.Drawing.Size(210, 0);
-            this.generalGroup.Name = "generalGroup";
-            this.generalGroup.Size = new System.Drawing.Size(210, 46);
-            this.generalGroup.TabIndex = 20;
-            // 
-            // statisticsButton
-            // 
-            this.statisticsButton.Image = global::HardekSuite.Properties.Resources.statistics;
-            this.statisticsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.statisticsButton.Location = new System.Drawing.Point(3, 3);
-            this.statisticsButton.Name = "statisticsButton";
-            this.statisticsButton.Size = new System.Drawing.Size(99, 40);
-            this.statisticsButton.TabIndex = 16;
-            this.statisticsButton.Text = "Statistics";
-            this.statisticsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.statisticsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.statisticsButton.UseVisualStyleBackColor = true;
-            // 
-            // toolsButton
-            // 
-            this.toolsButton.Image = global::HardekSuite.Properties.Resources.tools;
-            this.toolsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.toolsButton.Location = new System.Drawing.Point(108, 3);
-            this.toolsButton.Name = "toolsButton";
-            this.toolsButton.Size = new System.Drawing.Size(99, 40);
-            this.toolsButton.TabIndex = 19;
-            this.toolsButton.Text = "Tools";
-            this.toolsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.toolsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.toolsButton.UseVisualStyleBackColor = true;
-            // 
-            // toggleGeneral
-            // 
-            this.toggleGeneral.Image = global::HardekSuite.Properties.Resources.minimize;
-            this.toggleGeneral.Location = new System.Drawing.Point(196, 15);
-            this.toggleGeneral.Name = "toggleGeneral";
-            this.toggleGeneral.Size = new System.Drawing.Size(9, 9);
-            this.toggleGeneral.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.toggleGeneral.TabIndex = 11;
-            this.toggleGeneral.TabStop = false;
-            this.toggleGeneral.Click += new System.EventHandler(this.toggleGeneral_Click);
-            // 
-            // generalPicture
-            // 
-            this.generalPicture.Image = global::HardekSuite.Properties.Resources.general;
-            this.generalPicture.Location = new System.Drawing.Point(3, 3);
-            this.generalPicture.Name = "generalPicture";
-            this.generalPicture.Size = new System.Drawing.Size(210, 32);
-            this.generalPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.generalPicture.TabIndex = 12;
-            this.generalPicture.TabStop = false;
-            this.generalPicture.Click += new System.EventHandler(this.toggleGeneral_Click);
-            // 
-            // bigflow
-            // 
-            this.bigflow.AutoSize = true;
-            this.bigflow.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.bigflow.Controls.Add(this.generalPanel);
-            this.bigflow.Controls.Add(this.shortCutsPanel);
-            this.bigflow.Controls.Add(this.corePanel);
-            this.bigflow.Controls.Add(this.panel1);
-            this.bigflow.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bigflow.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.bigflow.Location = new System.Drawing.Point(0, 0);
-            this.bigflow.Name = "bigflow";
-            this.bigflow.Size = new System.Drawing.Size(217, 506);
-            this.bigflow.TabIndex = 16;
-            // 
-            // shortCutsPanel
-            // 
-            this.shortCutsPanel.AutoSize = true;
-            this.shortCutsPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.shortCutsPanel.Controls.Add(this.shortCutsGroup);
-            this.shortCutsPanel.Controls.Add(this.toggleShortcuts);
-            this.shortCutsPanel.Controls.Add(this.shortCutsPicture);
-            this.shortCutsPanel.Location = new System.Drawing.Point(0, 86);
-            this.shortCutsPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.shortCutsPanel.Name = "shortCutsPanel";
-            this.shortCutsPanel.Size = new System.Drawing.Size(216, 132);
-            this.shortCutsPanel.TabIndex = 16;
-            // 
-            // shortCutsGroup
-            // 
-            this.shortCutsGroup.AutoSize = true;
-            this.shortCutsGroup.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.shortCutsGroup.Controls.Add(this.commandsButton);
-            this.shortCutsGroup.Controls.Add(this.hotkeysButton);
-            this.shortCutsGroup.Controls.Add(this.contextButton);
-            this.shortCutsGroup.Controls.Add(this.iconsButton);
-            this.shortCutsGroup.Location = new System.Drawing.Point(3, 37);
-            this.shortCutsGroup.MaximumSize = new System.Drawing.Size(210, 0);
-            this.shortCutsGroup.MinimumSize = new System.Drawing.Size(210, 0);
-            this.shortCutsGroup.Name = "shortCutsGroup";
-            this.shortCutsGroup.Size = new System.Drawing.Size(210, 92);
-            this.shortCutsGroup.TabIndex = 20;
-            // 
-            // commandsButton
-            // 
-            this.commandsButton.Image = global::HardekSuite.Properties.Resources.commands;
-            this.commandsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.commandsButton.Location = new System.Drawing.Point(3, 3);
-            this.commandsButton.Name = "commandsButton";
-            this.commandsButton.Size = new System.Drawing.Size(99, 40);
-            this.commandsButton.TabIndex = 15;
-            this.commandsButton.Text = "Commands";
-            this.commandsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.commandsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.commandsButton.UseVisualStyleBackColor = true;
-            // 
-            // hotkeysButton
-            // 
-            this.hotkeysButton.Image = global::HardekSuite.Properties.Resources.hotkeys;
-            this.hotkeysButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.hotkeysButton.Location = new System.Drawing.Point(108, 3);
-            this.hotkeysButton.Name = "hotkeysButton";
-            this.hotkeysButton.Size = new System.Drawing.Size(99, 40);
-            this.hotkeysButton.TabIndex = 17;
-            this.hotkeysButton.Text = "Hotkeys";
-            this.hotkeysButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.hotkeysButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.hotkeysButton.UseVisualStyleBackColor = true;
-            // 
-            // contextButton
-            // 
-            this.contextButton.Image = global::HardekSuite.Properties.Resources.context;
-            this.contextButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.contextButton.Location = new System.Drawing.Point(3, 49);
-            this.contextButton.Name = "contextButton";
-            this.contextButton.Size = new System.Drawing.Size(99, 40);
-            this.contextButton.TabIndex = 18;
-            this.contextButton.Text = "Context";
-            this.contextButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.contextButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.contextButton.UseVisualStyleBackColor = true;
-            // 
-            // iconsButton
-            // 
-            this.iconsButton.Image = global::HardekSuite.Properties.Resources.icons;
-            this.iconsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconsButton.Location = new System.Drawing.Point(108, 49);
-            this.iconsButton.Name = "iconsButton";
-            this.iconsButton.Size = new System.Drawing.Size(99, 40);
-            this.iconsButton.TabIndex = 16;
-            this.iconsButton.Text = "Icons";
-            this.iconsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconsButton.UseVisualStyleBackColor = true;
-            // 
-            // toggleShortcuts
-            // 
-            this.toggleShortcuts.Image = global::HardekSuite.Properties.Resources.minimize;
-            this.toggleShortcuts.Location = new System.Drawing.Point(196, 15);
-            this.toggleShortcuts.Name = "toggleShortcuts";
-            this.toggleShortcuts.Size = new System.Drawing.Size(9, 9);
-            this.toggleShortcuts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.toggleShortcuts.TabIndex = 9;
-            this.toggleShortcuts.TabStop = false;
-            this.toggleShortcuts.Click += new System.EventHandler(this.toggleShortcuts_Click);
-            // 
-            // shortCutsPicture
-            // 
-            this.shortCutsPicture.Image = global::HardekSuite.Properties.Resources.shortcuts;
-            this.shortCutsPicture.Location = new System.Drawing.Point(3, 3);
-            this.shortCutsPicture.Name = "shortCutsPicture";
-            this.shortCutsPicture.Size = new System.Drawing.Size(210, 32);
-            this.shortCutsPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.shortCutsPicture.TabIndex = 10;
-            this.shortCutsPicture.TabStop = false;
-            this.shortCutsPicture.Click += new System.EventHandler(this.toggleShortcuts_Click);
-            // 
-            // corePanel
-            // 
-            this.corePanel.AutoSize = true;
-            this.corePanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.corePanel.Controls.Add(this.coreGroup);
-            this.corePanel.Controls.Add(this.toggleCore);
-            this.corePanel.Controls.Add(this.corePicture);
-            this.corePanel.Location = new System.Drawing.Point(0, 218);
-            this.corePanel.Margin = new System.Windows.Forms.Padding(0);
-            this.corePanel.Name = "corePanel";
-            this.corePanel.Size = new System.Drawing.Size(216, 178);
-            this.corePanel.TabIndex = 17;
-            // 
-            // coreGroup
-            // 
-            this.coreGroup.AutoSize = true;
-            this.coreGroup.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.coreGroup.Controls.Add(this.healingButton);
-            this.coreGroup.Controls.Add(this.chargerButton);
-            this.coreGroup.Controls.Add(this.cavebotButton);
-            this.coreGroup.Controls.Add(this.targetingButton);
-            this.coreGroup.Controls.Add(this.looterButton);
-            this.coreGroup.Controls.Add(this.makerButton);
-            this.coreGroup.Location = new System.Drawing.Point(3, 37);
-            this.coreGroup.MaximumSize = new System.Drawing.Size(210, 0);
-            this.coreGroup.MinimumSize = new System.Drawing.Size(210, 0);
-            this.coreGroup.Name = "coreGroup";
-            this.coreGroup.Size = new System.Drawing.Size(210, 138);
-            this.coreGroup.TabIndex = 20;
-            // 
-            // healingButton
-            // 
-            this.healingButton.Image = global::HardekSuite.Properties.Resources.healing;
-            this.healingButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.healingButton.Location = new System.Drawing.Point(3, 3);
-            this.healingButton.Name = "healingButton";
-            this.healingButton.Size = new System.Drawing.Size(99, 40);
-            this.healingButton.TabIndex = 6;
-            this.healingButton.Text = "Healing";
-            this.healingButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.healingButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.healingButton.UseVisualStyleBackColor = true;
-            this.healingButton.Click += new System.EventHandler(this.healingButton_Click);
-            // 
-            // chargerButton
-            // 
-            this.chargerButton.Image = global::HardekSuite.Properties.Resources.charger;
-            this.chargerButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.chargerButton.Location = new System.Drawing.Point(108, 3);
-            this.chargerButton.Name = "chargerButton";
-            this.chargerButton.Size = new System.Drawing.Size(99, 40);
-            this.chargerButton.TabIndex = 7;
-            this.chargerButton.Text = "Charger";
-            this.chargerButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.chargerButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.chargerButton.UseVisualStyleBackColor = true;
-            // 
-            // cavebotButton
-            // 
-            this.cavebotButton.Image = global::HardekSuite.Properties.Resources.cavebot;
-            this.cavebotButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cavebotButton.Location = new System.Drawing.Point(3, 49);
-            this.cavebotButton.Name = "cavebotButton";
-            this.cavebotButton.Size = new System.Drawing.Size(99, 40);
-            this.cavebotButton.TabIndex = 8;
-            this.cavebotButton.Text = "Cavebot";
-            this.cavebotButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cavebotButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.cavebotButton.UseVisualStyleBackColor = true;
-            // 
-            // targetingButton
-            // 
-            this.targetingButton.Image = global::HardekSuite.Properties.Resources.targeting;
-            this.targetingButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.targetingButton.Location = new System.Drawing.Point(108, 49);
-            this.targetingButton.Name = "targetingButton";
-            this.targetingButton.Size = new System.Drawing.Size(99, 40);
-            this.targetingButton.TabIndex = 4;
-            this.targetingButton.Text = "Targeting";
-            this.targetingButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.targetingButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.targetingButton.UseVisualStyleBackColor = true;
-            // 
-            // looterButton
-            // 
-            this.looterButton.BackgroundImage = global::HardekSuite.Properties.Resources.looter_background;
-            this.looterButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.looterButton.Image = global::HardekSuite.Properties.Resources.looter;
-            this.looterButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.looterButton.Location = new System.Drawing.Point(3, 95);
-            this.looterButton.Name = "looterButton";
-            this.looterButton.Size = new System.Drawing.Size(99, 40);
-            this.looterButton.TabIndex = 5;
-            this.looterButton.Text = "Looter";
-            this.looterButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.looterButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.looterButton.UseVisualStyleBackColor = true;
-            // 
-            // makerButton
-            // 
-            this.makerButton.Image = global::HardekSuite.Properties.Resources.maker;
-            this.makerButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.makerButton.Location = new System.Drawing.Point(108, 95);
-            this.makerButton.Name = "makerButton";
-            this.makerButton.Size = new System.Drawing.Size(99, 40);
-            this.makerButton.TabIndex = 1;
-            this.makerButton.Text = "Maker";
-            this.makerButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.makerButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.makerButton.UseVisualStyleBackColor = true;
-            // 
-            // toggleCore
-            // 
-            this.toggleCore.Image = global::HardekSuite.Properties.Resources.minimize;
-            this.toggleCore.Location = new System.Drawing.Point(196, 15);
-            this.toggleCore.Name = "toggleCore";
-            this.toggleCore.Size = new System.Drawing.Size(9, 9);
-            this.toggleCore.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.toggleCore.TabIndex = 13;
-            this.toggleCore.TabStop = false;
-            this.toggleCore.Click += new System.EventHandler(this.toggleCore_Click);
-            // 
-            // corePicture
-            // 
-            this.corePicture.Image = global::HardekSuite.Properties.Resources.core;
-            this.corePicture.Location = new System.Drawing.Point(3, 3);
-            this.corePicture.Name = "corePicture";
-            this.corePicture.Size = new System.Drawing.Size(210, 32);
-            this.corePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.corePicture.TabIndex = 14;
-            this.corePicture.TabStop = false;
-            this.corePicture.Click += new System.EventHandler(this.toggleCore_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.AutoSize = true;
-            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel1.Controls.Add(this.settingsGroup);
-            this.panel1.Controls.Add(this.toggleSettings);
-            this.panel1.Controls.Add(this.settingsPicture);
-            this.panel1.Location = new System.Drawing.Point(0, 396);
-            this.panel1.Margin = new System.Windows.Forms.Padding(0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(216, 106);
-            this.panel1.TabIndex = 18;
-            // 
-            // settingsGroup
-            // 
-            this.settingsGroup.AutoSize = true;
-            this.settingsGroup.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.settingsGroup.Controls.Add(this.settingsTab);
-            this.settingsGroup.Controls.Add(this.saveButton);
-            this.settingsGroup.Controls.Add(this.loadButton);
-            this.settingsGroup.Location = new System.Drawing.Point(3, 37);
-            this.settingsGroup.MaximumSize = new System.Drawing.Size(210, 0);
-            this.settingsGroup.MinimumSize = new System.Drawing.Size(210, 0);
-            this.settingsGroup.Name = "settingsGroup";
-            this.settingsGroup.Size = new System.Drawing.Size(210, 66);
-            this.settingsGroup.TabIndex = 20;
-            // 
-            // settingsTab
-            // 
-            this.settingsTab.Controls.Add(this.tab1);
-            this.settingsTab.Controls.Add(this.tab2);
-            this.settingsTab.Controls.Add(this.tab3);
-            this.settingsTab.Controls.Add(this.tab4);
-            this.settingsTab.Controls.Add(this.tab5);
-            this.settingsTab.Controls.Add(this.tabCustom);
-            this.settingsTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.settingsTab.Location = new System.Drawing.Point(1, 1);
-            this.settingsTab.Margin = new System.Windows.Forms.Padding(1);
-            this.settingsTab.Name = "settingsTab";
-            this.settingsTab.Padding = new System.Drawing.Point(1, 2);
-            this.settingsTab.SelectedIndex = 0;
-            this.settingsTab.Size = new System.Drawing.Size(210, 18);
-            this.settingsTab.TabIndex = 19;
-            // 
-            // tab1
-            // 
-            this.tab1.Location = new System.Drawing.Point(4, 20);
-            this.tab1.Margin = new System.Windows.Forms.Padding(0);
-            this.tab1.Name = "tab1";
-            this.tab1.Size = new System.Drawing.Size(202, 0);
-            this.tab1.TabIndex = 0;
-            this.tab1.Text = "    1";
-            this.tab1.UseVisualStyleBackColor = true;
-            // 
-            // tab2
-            // 
-            this.tab2.Location = new System.Drawing.Point(4, 20);
-            this.tab2.Name = "tab2";
-            this.tab2.Padding = new System.Windows.Forms.Padding(3);
-            this.tab2.Size = new System.Drawing.Size(202, 0);
-            this.tab2.TabIndex = 1;
-            this.tab2.Text = "    2";
-            this.tab2.UseVisualStyleBackColor = true;
-            // 
-            // tab3
-            // 
-            this.tab3.Location = new System.Drawing.Point(4, 20);
-            this.tab3.Margin = new System.Windows.Forms.Padding(0);
-            this.tab3.Name = "tab3";
-            this.tab3.Size = new System.Drawing.Size(202, 0);
-            this.tab3.TabIndex = 2;
-            this.tab3.Text = "    3";
-            this.tab3.UseVisualStyleBackColor = true;
-            // 
-            // tab4
-            // 
-            this.tab4.Location = new System.Drawing.Point(4, 20);
-            this.tab4.Name = "tab4";
-            this.tab4.Padding = new System.Windows.Forms.Padding(3);
-            this.tab4.Size = new System.Drawing.Size(202, 0);
-            this.tab4.TabIndex = 3;
-            this.tab4.Text = "    4";
-            this.tab4.UseVisualStyleBackColor = true;
-            // 
-            // tab5
-            // 
-            this.tab5.Location = new System.Drawing.Point(4, 20);
-            this.tab5.Name = "tab5";
-            this.tab5.Padding = new System.Windows.Forms.Padding(3);
-            this.tab5.Size = new System.Drawing.Size(202, 0);
-            this.tab5.TabIndex = 4;
-            this.tab5.Text = "    5";
-            this.tab5.UseVisualStyleBackColor = true;
-            // 
-            // tabCustom
-            // 
-            this.tabCustom.Location = new System.Drawing.Point(4, 20);
-            this.tabCustom.Name = "tabCustom";
-            this.tabCustom.Size = new System.Drawing.Size(202, 0);
-            this.tabCustom.TabIndex = 5;
-            this.tabCustom.Text = " Custom ";
-            this.tabCustom.UseVisualStyleBackColor = true;
-            // 
-            // saveButton
-            // 
-            this.saveButton.Image = global::HardekSuite.Properties.Resources.save;
-            this.saveButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.saveButton.Location = new System.Drawing.Point(3, 23);
-            this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(99, 40);
-            this.saveButton.TabIndex = 16;
-            this.saveButton.Text = "Save";
-            this.saveButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.saveButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.saveButton.UseVisualStyleBackColor = true;
-            // 
-            // loadButton
-            // 
-            this.loadButton.Image = global::HardekSuite.Properties.Resources.load;
-            this.loadButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.loadButton.Location = new System.Drawing.Point(108, 23);
-            this.loadButton.Name = "loadButton";
-            this.loadButton.Size = new System.Drawing.Size(99, 40);
-            this.loadButton.TabIndex = 19;
-            this.loadButton.Text = "Load";
-            this.loadButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.loadButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.loadButton.UseVisualStyleBackColor = true;
-            // 
-            // toggleSettings
-            // 
-            this.toggleSettings.Image = global::HardekSuite.Properties.Resources.minimize;
-            this.toggleSettings.Location = new System.Drawing.Point(196, 15);
-            this.toggleSettings.Name = "toggleSettings";
-            this.toggleSettings.Size = new System.Drawing.Size(9, 9);
-            this.toggleSettings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.toggleSettings.TabIndex = 11;
-            this.toggleSettings.TabStop = false;
-            this.toggleSettings.Click += new System.EventHandler(this.toggleSettings_Click);
-            // 
-            // settingsPicture
-            // 
-            this.settingsPicture.Image = global::HardekSuite.Properties.Resources.settings;
-            this.settingsPicture.Location = new System.Drawing.Point(3, 3);
-            this.settingsPicture.Name = "settingsPicture";
-            this.settingsPicture.Size = new System.Drawing.Size(210, 32);
-            this.settingsPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.settingsPicture.TabIndex = 12;
-            this.settingsPicture.TabStop = false;
-            this.settingsPicture.Click += new System.EventHandler(this.toggleSettings_Click);
+            // uxGeneralPanel
+            // 
+            this.uxGeneralPanel.AutoSize = true;
+            this.uxGeneralPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.uxGeneralPanel.Controls.Add(this.uxGeneralGroup);
+            this.uxGeneralPanel.Controls.Add(this.uxToggleGeneral);
+            this.uxGeneralPanel.Controls.Add(this.uxGeneralPicture);
+            this.uxGeneralPanel.Location = new System.Drawing.Point(0, 0);
+            this.uxGeneralPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.uxGeneralPanel.Name = "uxGeneralPanel";
+            this.uxGeneralPanel.Size = new System.Drawing.Size(216, 86);
+            this.uxGeneralPanel.TabIndex = 15;
+            // 
+            // uxGeneralGroup
+            // 
+            this.uxGeneralGroup.AutoSize = true;
+            this.uxGeneralGroup.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.uxGeneralGroup.Controls.Add(this.uxStatisticsButton);
+            this.uxGeneralGroup.Controls.Add(this.uxToolsButton);
+            this.uxGeneralGroup.Location = new System.Drawing.Point(3, 37);
+            this.uxGeneralGroup.MaximumSize = new System.Drawing.Size(210, 0);
+            this.uxGeneralGroup.MinimumSize = new System.Drawing.Size(210, 0);
+            this.uxGeneralGroup.Name = "uxGeneralGroup";
+            this.uxGeneralGroup.Size = new System.Drawing.Size(210, 46);
+            this.uxGeneralGroup.TabIndex = 20;
+            // 
+            // uxStatisticsButton
+            // 
+            this.uxStatisticsButton.Image = global::HardekSuite.Properties.Resources.statistics;
+            this.uxStatisticsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uxStatisticsButton.Location = new System.Drawing.Point(3, 3);
+            this.uxStatisticsButton.Name = "uxStatisticsButton";
+            this.uxStatisticsButton.Size = new System.Drawing.Size(99, 40);
+            this.uxStatisticsButton.TabIndex = 16;
+            this.uxStatisticsButton.Text = "Statistics";
+            this.uxStatisticsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uxStatisticsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.uxStatisticsButton.UseVisualStyleBackColor = true;
+            // 
+            // uxToolsButton
+            // 
+            this.uxToolsButton.Image = global::HardekSuite.Properties.Resources.tools;
+            this.uxToolsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uxToolsButton.Location = new System.Drawing.Point(108, 3);
+            this.uxToolsButton.Name = "uxToolsButton";
+            this.uxToolsButton.Size = new System.Drawing.Size(99, 40);
+            this.uxToolsButton.TabIndex = 19;
+            this.uxToolsButton.Text = "Tools";
+            this.uxToolsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uxToolsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.uxToolsButton.UseVisualStyleBackColor = true;
+            // 
+            // uxToggleGeneral
+            // 
+            this.uxToggleGeneral.Image = global::HardekSuite.Properties.Resources.minimize;
+            this.uxToggleGeneral.Location = new System.Drawing.Point(196, 15);
+            this.uxToggleGeneral.Name = "uxToggleGeneral";
+            this.uxToggleGeneral.Size = new System.Drawing.Size(9, 9);
+            this.uxToggleGeneral.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.uxToggleGeneral.TabIndex = 11;
+            this.uxToggleGeneral.TabStop = false;
+            this.uxToggleGeneral.Click += new System.EventHandler(this.toggleGeneral_Click);
+            // 
+            // uxGeneralPicture
+            // 
+            this.uxGeneralPicture.Image = global::HardekSuite.Properties.Resources.general;
+            this.uxGeneralPicture.Location = new System.Drawing.Point(3, 3);
+            this.uxGeneralPicture.Name = "uxGeneralPicture";
+            this.uxGeneralPicture.Size = new System.Drawing.Size(210, 32);
+            this.uxGeneralPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.uxGeneralPicture.TabIndex = 12;
+            this.uxGeneralPicture.TabStop = false;
+            this.uxGeneralPicture.Click += new System.EventHandler(this.toggleGeneral_Click);
+            // 
+            // uxBigflow
+            // 
+            this.uxBigflow.AutoSize = true;
+            this.uxBigflow.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.uxBigflow.Controls.Add(this.uxGeneralPanel);
+            this.uxBigflow.Controls.Add(this.uxShortcutsPanel);
+            this.uxBigflow.Controls.Add(this.uxCorePanel);
+            this.uxBigflow.Controls.Add(this.uxMainPanel);
+            this.uxBigflow.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uxBigflow.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.uxBigflow.Location = new System.Drawing.Point(0, 0);
+            this.uxBigflow.Name = "uxBigflow";
+            this.uxBigflow.Size = new System.Drawing.Size(217, 506);
+            this.uxBigflow.TabIndex = 16;
+            // 
+            // uxShortcutsPanel
+            // 
+            this.uxShortcutsPanel.AutoSize = true;
+            this.uxShortcutsPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.uxShortcutsPanel.Controls.Add(this.uxShortcutsGroup);
+            this.uxShortcutsPanel.Controls.Add(this.uxToggleShortcuts);
+            this.uxShortcutsPanel.Controls.Add(this.uxShortcutsPicture);
+            this.uxShortcutsPanel.Location = new System.Drawing.Point(0, 86);
+            this.uxShortcutsPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.uxShortcutsPanel.Name = "uxShortcutsPanel";
+            this.uxShortcutsPanel.Size = new System.Drawing.Size(216, 132);
+            this.uxShortcutsPanel.TabIndex = 16;
+            // 
+            // uxShortcutsGroup
+            // 
+            this.uxShortcutsGroup.AutoSize = true;
+            this.uxShortcutsGroup.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.uxShortcutsGroup.Controls.Add(this.uxCommandsButton);
+            this.uxShortcutsGroup.Controls.Add(this.uxHotkeysButton);
+            this.uxShortcutsGroup.Controls.Add(this.uxContextButton);
+            this.uxShortcutsGroup.Controls.Add(this.uxIconsButton);
+            this.uxShortcutsGroup.Location = new System.Drawing.Point(3, 37);
+            this.uxShortcutsGroup.MaximumSize = new System.Drawing.Size(210, 0);
+            this.uxShortcutsGroup.MinimumSize = new System.Drawing.Size(210, 0);
+            this.uxShortcutsGroup.Name = "uxShortcutsGroup";
+            this.uxShortcutsGroup.Size = new System.Drawing.Size(210, 92);
+            this.uxShortcutsGroup.TabIndex = 20;
+            // 
+            // uxCommandsButton
+            // 
+            this.uxCommandsButton.Image = global::HardekSuite.Properties.Resources.commands;
+            this.uxCommandsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uxCommandsButton.Location = new System.Drawing.Point(3, 3);
+            this.uxCommandsButton.Name = "uxCommandsButton";
+            this.uxCommandsButton.Size = new System.Drawing.Size(99, 40);
+            this.uxCommandsButton.TabIndex = 15;
+            this.uxCommandsButton.Text = "Commands";
+            this.uxCommandsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uxCommandsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.uxCommandsButton.UseVisualStyleBackColor = true;
+            this.uxCommandsButton.Click += new System.EventHandler(this.uxCommandsButton_Click);
+            // 
+            // uxHotkeysButton
+            // 
+            this.uxHotkeysButton.Image = global::HardekSuite.Properties.Resources.hotkeys;
+            this.uxHotkeysButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uxHotkeysButton.Location = new System.Drawing.Point(108, 3);
+            this.uxHotkeysButton.Name = "uxHotkeysButton";
+            this.uxHotkeysButton.Size = new System.Drawing.Size(99, 40);
+            this.uxHotkeysButton.TabIndex = 17;
+            this.uxHotkeysButton.Text = "Hotkeys";
+            this.uxHotkeysButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uxHotkeysButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.uxHotkeysButton.UseVisualStyleBackColor = true;
+            // 
+            // uxContextButton
+            // 
+            this.uxContextButton.Image = global::HardekSuite.Properties.Resources.context;
+            this.uxContextButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uxContextButton.Location = new System.Drawing.Point(3, 49);
+            this.uxContextButton.Name = "uxContextButton";
+            this.uxContextButton.Size = new System.Drawing.Size(99, 40);
+            this.uxContextButton.TabIndex = 18;
+            this.uxContextButton.Text = "Context";
+            this.uxContextButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uxContextButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.uxContextButton.UseVisualStyleBackColor = true;
+            this.uxContextButton.Click += new System.EventHandler(this.uxContextButton_Click);
+            // 
+            // uxIconsButton
+            // 
+            this.uxIconsButton.Image = global::HardekSuite.Properties.Resources.icons;
+            this.uxIconsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uxIconsButton.Location = new System.Drawing.Point(108, 49);
+            this.uxIconsButton.Name = "uxIconsButton";
+            this.uxIconsButton.Size = new System.Drawing.Size(99, 40);
+            this.uxIconsButton.TabIndex = 16;
+            this.uxIconsButton.Text = "Icons";
+            this.uxIconsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uxIconsButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.uxIconsButton.UseVisualStyleBackColor = true;
+            // 
+            // uxToggleShortcuts
+            // 
+            this.uxToggleShortcuts.Image = global::HardekSuite.Properties.Resources.minimize;
+            this.uxToggleShortcuts.Location = new System.Drawing.Point(196, 15);
+            this.uxToggleShortcuts.Name = "uxToggleShortcuts";
+            this.uxToggleShortcuts.Size = new System.Drawing.Size(9, 9);
+            this.uxToggleShortcuts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.uxToggleShortcuts.TabIndex = 9;
+            this.uxToggleShortcuts.TabStop = false;
+            this.uxToggleShortcuts.Click += new System.EventHandler(this.toggleShortcuts_Click);
+            // 
+            // uxShortcutsPicture
+            // 
+            this.uxShortcutsPicture.Image = global::HardekSuite.Properties.Resources.shortcuts;
+            this.uxShortcutsPicture.Location = new System.Drawing.Point(3, 3);
+            this.uxShortcutsPicture.Name = "uxShortcutsPicture";
+            this.uxShortcutsPicture.Size = new System.Drawing.Size(210, 32);
+            this.uxShortcutsPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.uxShortcutsPicture.TabIndex = 10;
+            this.uxShortcutsPicture.TabStop = false;
+            this.uxShortcutsPicture.Click += new System.EventHandler(this.toggleShortcuts_Click);
+            // 
+            // uxCorePanel
+            // 
+            this.uxCorePanel.AutoSize = true;
+            this.uxCorePanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.uxCorePanel.Controls.Add(this.uxCoreGroup);
+            this.uxCorePanel.Controls.Add(this.uxToggleCore);
+            this.uxCorePanel.Controls.Add(this.uxCorePicture);
+            this.uxCorePanel.Location = new System.Drawing.Point(0, 218);
+            this.uxCorePanel.Margin = new System.Windows.Forms.Padding(0);
+            this.uxCorePanel.Name = "uxCorePanel";
+            this.uxCorePanel.Size = new System.Drawing.Size(216, 178);
+            this.uxCorePanel.TabIndex = 17;
+            // 
+            // uxCoreGroup
+            // 
+            this.uxCoreGroup.AutoSize = true;
+            this.uxCoreGroup.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.uxCoreGroup.Controls.Add(this.uxHealingButton);
+            this.uxCoreGroup.Controls.Add(this.uxChargerButton);
+            this.uxCoreGroup.Controls.Add(this.uxCavebotButton);
+            this.uxCoreGroup.Controls.Add(this.uxTargetingButton);
+            this.uxCoreGroup.Controls.Add(this.uxLooterButton);
+            this.uxCoreGroup.Controls.Add(this.uxMakerButton);
+            this.uxCoreGroup.Location = new System.Drawing.Point(3, 37);
+            this.uxCoreGroup.MaximumSize = new System.Drawing.Size(210, 0);
+            this.uxCoreGroup.MinimumSize = new System.Drawing.Size(210, 0);
+            this.uxCoreGroup.Name = "uxCoreGroup";
+            this.uxCoreGroup.Size = new System.Drawing.Size(210, 138);
+            this.uxCoreGroup.TabIndex = 20;
+            // 
+            // uxHealingButton
+            // 
+            this.uxHealingButton.Image = global::HardekSuite.Properties.Resources.healing;
+            this.uxHealingButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uxHealingButton.Location = new System.Drawing.Point(3, 3);
+            this.uxHealingButton.Name = "uxHealingButton";
+            this.uxHealingButton.Size = new System.Drawing.Size(99, 40);
+            this.uxHealingButton.TabIndex = 6;
+            this.uxHealingButton.Text = "Healing";
+            this.uxHealingButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uxHealingButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.uxHealingButton.UseVisualStyleBackColor = true;
+            this.uxHealingButton.Click += new System.EventHandler(this.healingButton_Click);
+            // 
+            // uxChargerButton
+            // 
+            this.uxChargerButton.Image = global::HardekSuite.Properties.Resources.charger;
+            this.uxChargerButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uxChargerButton.Location = new System.Drawing.Point(108, 3);
+            this.uxChargerButton.Name = "uxChargerButton";
+            this.uxChargerButton.Size = new System.Drawing.Size(99, 40);
+            this.uxChargerButton.TabIndex = 7;
+            this.uxChargerButton.Text = "Charger";
+            this.uxChargerButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uxChargerButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.uxChargerButton.UseVisualStyleBackColor = true;
+            // 
+            // uxCavebotButton
+            // 
+            this.uxCavebotButton.Image = global::HardekSuite.Properties.Resources.cavebot;
+            this.uxCavebotButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uxCavebotButton.Location = new System.Drawing.Point(3, 49);
+            this.uxCavebotButton.Name = "uxCavebotButton";
+            this.uxCavebotButton.Size = new System.Drawing.Size(99, 40);
+            this.uxCavebotButton.TabIndex = 8;
+            this.uxCavebotButton.Text = "Cavebot";
+            this.uxCavebotButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uxCavebotButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.uxCavebotButton.UseVisualStyleBackColor = true;
+            // 
+            // uxTargetingButton
+            // 
+            this.uxTargetingButton.Image = global::HardekSuite.Properties.Resources.targeting;
+            this.uxTargetingButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uxTargetingButton.Location = new System.Drawing.Point(108, 49);
+            this.uxTargetingButton.Name = "uxTargetingButton";
+            this.uxTargetingButton.Size = new System.Drawing.Size(99, 40);
+            this.uxTargetingButton.TabIndex = 4;
+            this.uxTargetingButton.Text = "Targeting";
+            this.uxTargetingButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uxTargetingButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.uxTargetingButton.UseVisualStyleBackColor = true;
+            // 
+            // uxLooterButton
+            // 
+            this.uxLooterButton.BackgroundImage = global::HardekSuite.Properties.Resources.looter_background;
+            this.uxLooterButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.uxLooterButton.Image = global::HardekSuite.Properties.Resources.looter;
+            this.uxLooterButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uxLooterButton.Location = new System.Drawing.Point(3, 95);
+            this.uxLooterButton.Name = "uxLooterButton";
+            this.uxLooterButton.Size = new System.Drawing.Size(99, 40);
+            this.uxLooterButton.TabIndex = 5;
+            this.uxLooterButton.Text = "Looter";
+            this.uxLooterButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uxLooterButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.uxLooterButton.UseVisualStyleBackColor = true;
+            // 
+            // uxMakerButton
+            // 
+            this.uxMakerButton.Image = global::HardekSuite.Properties.Resources.maker;
+            this.uxMakerButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uxMakerButton.Location = new System.Drawing.Point(108, 95);
+            this.uxMakerButton.Name = "uxMakerButton";
+            this.uxMakerButton.Size = new System.Drawing.Size(99, 40);
+            this.uxMakerButton.TabIndex = 1;
+            this.uxMakerButton.Text = "Maker";
+            this.uxMakerButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uxMakerButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.uxMakerButton.UseVisualStyleBackColor = true;
+            // 
+            // uxToggleCore
+            // 
+            this.uxToggleCore.Image = global::HardekSuite.Properties.Resources.minimize;
+            this.uxToggleCore.Location = new System.Drawing.Point(196, 15);
+            this.uxToggleCore.Name = "uxToggleCore";
+            this.uxToggleCore.Size = new System.Drawing.Size(9, 9);
+            this.uxToggleCore.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.uxToggleCore.TabIndex = 13;
+            this.uxToggleCore.TabStop = false;
+            this.uxToggleCore.Click += new System.EventHandler(this.toggleCore_Click);
+            // 
+            // uxCorePicture
+            // 
+            this.uxCorePicture.Image = global::HardekSuite.Properties.Resources.core;
+            this.uxCorePicture.Location = new System.Drawing.Point(3, 3);
+            this.uxCorePicture.Name = "uxCorePicture";
+            this.uxCorePicture.Size = new System.Drawing.Size(210, 32);
+            this.uxCorePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.uxCorePicture.TabIndex = 14;
+            this.uxCorePicture.TabStop = false;
+            this.uxCorePicture.Click += new System.EventHandler(this.toggleCore_Click);
+            // 
+            // uxMainPanel
+            // 
+            this.uxMainPanel.AutoSize = true;
+            this.uxMainPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.uxMainPanel.Controls.Add(this.uxSettingsGroup);
+            this.uxMainPanel.Controls.Add(this.uxToggleSettings);
+            this.uxMainPanel.Controls.Add(this.uxSettingsPicture);
+            this.uxMainPanel.Location = new System.Drawing.Point(0, 396);
+            this.uxMainPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.uxMainPanel.Name = "uxMainPanel";
+            this.uxMainPanel.Size = new System.Drawing.Size(216, 106);
+            this.uxMainPanel.TabIndex = 18;
+            // 
+            // uxSettingsGroup
+            // 
+            this.uxSettingsGroup.AutoSize = true;
+            this.uxSettingsGroup.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.uxSettingsGroup.Controls.Add(this.uxSettingsTab);
+            this.uxSettingsGroup.Controls.Add(this.uxSaveButton);
+            this.uxSettingsGroup.Controls.Add(this.uxLoadButton);
+            this.uxSettingsGroup.Location = new System.Drawing.Point(3, 37);
+            this.uxSettingsGroup.MaximumSize = new System.Drawing.Size(210, 0);
+            this.uxSettingsGroup.MinimumSize = new System.Drawing.Size(210, 0);
+            this.uxSettingsGroup.Name = "uxSettingsGroup";
+            this.uxSettingsGroup.Size = new System.Drawing.Size(210, 66);
+            this.uxSettingsGroup.TabIndex = 20;
+            // 
+            // uxSettingsTab
+            // 
+            this.uxSettingsTab.Controls.Add(this.uxTab1);
+            this.uxSettingsTab.Controls.Add(this.uxTab2);
+            this.uxSettingsTab.Controls.Add(this.uxTab3);
+            this.uxSettingsTab.Controls.Add(this.uxTab4);
+            this.uxSettingsTab.Controls.Add(this.uxTab5);
+            this.uxSettingsTab.Controls.Add(this.uxTabCustom);
+            this.uxSettingsTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxSettingsTab.Location = new System.Drawing.Point(1, 1);
+            this.uxSettingsTab.Margin = new System.Windows.Forms.Padding(1);
+            this.uxSettingsTab.Name = "uxSettingsTab";
+            this.uxSettingsTab.Padding = new System.Drawing.Point(1, 2);
+            this.uxSettingsTab.SelectedIndex = 0;
+            this.uxSettingsTab.Size = new System.Drawing.Size(210, 18);
+            this.uxSettingsTab.TabIndex = 19;
+            // 
+            // uxTab1
+            // 
+            this.uxTab1.Location = new System.Drawing.Point(4, 20);
+            this.uxTab1.Margin = new System.Windows.Forms.Padding(0);
+            this.uxTab1.Name = "uxTab1";
+            this.uxTab1.Size = new System.Drawing.Size(202, 0);
+            this.uxTab1.TabIndex = 0;
+            this.uxTab1.Text = "    1";
+            this.uxTab1.UseVisualStyleBackColor = true;
+            // 
+            // uxTab2
+            // 
+            this.uxTab2.Location = new System.Drawing.Point(4, 20);
+            this.uxTab2.Name = "uxTab2";
+            this.uxTab2.Padding = new System.Windows.Forms.Padding(3);
+            this.uxTab2.Size = new System.Drawing.Size(202, 0);
+            this.uxTab2.TabIndex = 1;
+            this.uxTab2.Text = "    2";
+            this.uxTab2.UseVisualStyleBackColor = true;
+            // 
+            // uxTab3
+            // 
+            this.uxTab3.Location = new System.Drawing.Point(4, 20);
+            this.uxTab3.Margin = new System.Windows.Forms.Padding(0);
+            this.uxTab3.Name = "uxTab3";
+            this.uxTab3.Size = new System.Drawing.Size(202, 0);
+            this.uxTab3.TabIndex = 2;
+            this.uxTab3.Text = "    3";
+            this.uxTab3.UseVisualStyleBackColor = true;
+            // 
+            // uxTab4
+            // 
+            this.uxTab4.Location = new System.Drawing.Point(4, 20);
+            this.uxTab4.Name = "uxTab4";
+            this.uxTab4.Padding = new System.Windows.Forms.Padding(3);
+            this.uxTab4.Size = new System.Drawing.Size(202, 0);
+            this.uxTab4.TabIndex = 3;
+            this.uxTab4.Text = "    4";
+            this.uxTab4.UseVisualStyleBackColor = true;
+            // 
+            // uxTab5
+            // 
+            this.uxTab5.Location = new System.Drawing.Point(4, 20);
+            this.uxTab5.Name = "uxTab5";
+            this.uxTab5.Padding = new System.Windows.Forms.Padding(3);
+            this.uxTab5.Size = new System.Drawing.Size(202, 0);
+            this.uxTab5.TabIndex = 4;
+            this.uxTab5.Text = "    5";
+            this.uxTab5.UseVisualStyleBackColor = true;
+            // 
+            // uxTabCustom
+            // 
+            this.uxTabCustom.Location = new System.Drawing.Point(4, 20);
+            this.uxTabCustom.Name = "uxTabCustom";
+            this.uxTabCustom.Size = new System.Drawing.Size(202, 0);
+            this.uxTabCustom.TabIndex = 5;
+            this.uxTabCustom.Text = " Custom ";
+            this.uxTabCustom.UseVisualStyleBackColor = true;
+            // 
+            // uxSaveButton
+            // 
+            this.uxSaveButton.Image = global::HardekSuite.Properties.Resources.save;
+            this.uxSaveButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uxSaveButton.Location = new System.Drawing.Point(3, 23);
+            this.uxSaveButton.Name = "uxSaveButton";
+            this.uxSaveButton.Size = new System.Drawing.Size(99, 40);
+            this.uxSaveButton.TabIndex = 16;
+            this.uxSaveButton.Text = "Save";
+            this.uxSaveButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uxSaveButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.uxSaveButton.UseVisualStyleBackColor = true;
+            // 
+            // uxLoadButton
+            // 
+            this.uxLoadButton.Image = global::HardekSuite.Properties.Resources.load;
+            this.uxLoadButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uxLoadButton.Location = new System.Drawing.Point(108, 23);
+            this.uxLoadButton.Name = "uxLoadButton";
+            this.uxLoadButton.Size = new System.Drawing.Size(99, 40);
+            this.uxLoadButton.TabIndex = 19;
+            this.uxLoadButton.Text = "Load";
+            this.uxLoadButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uxLoadButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.uxLoadButton.UseVisualStyleBackColor = true;
+            // 
+            // uxToggleSettings
+            // 
+            this.uxToggleSettings.Image = global::HardekSuite.Properties.Resources.minimize;
+            this.uxToggleSettings.Location = new System.Drawing.Point(196, 15);
+            this.uxToggleSettings.Name = "uxToggleSettings";
+            this.uxToggleSettings.Size = new System.Drawing.Size(9, 9);
+            this.uxToggleSettings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.uxToggleSettings.TabIndex = 11;
+            this.uxToggleSettings.TabStop = false;
+            this.uxToggleSettings.Click += new System.EventHandler(this.toggleSettings_Click);
+            // 
+            // uxSettingsPicture
+            // 
+            this.uxSettingsPicture.Image = global::HardekSuite.Properties.Resources.settings;
+            this.uxSettingsPicture.Location = new System.Drawing.Point(3, 3);
+            this.uxSettingsPicture.Name = "uxSettingsPicture";
+            this.uxSettingsPicture.Size = new System.Drawing.Size(210, 32);
+            this.uxSettingsPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.uxSettingsPicture.TabIndex = 12;
+            this.uxSettingsPicture.TabStop = false;
+            this.uxSettingsPicture.Click += new System.EventHandler(this.toggleSettings_Click);
             // 
             // fileToolStripMenuItem
             // 
@@ -824,7 +826,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(217, 506);
-            this.Controls.Add(this.bigflow);
+            this.Controls.Add(this.uxBigflow);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -836,29 +838,29 @@
             this.TopMost = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.uxMain_FormClosing);
             this.trayContextMenu.ResumeLayout(false);
-            this.generalPanel.ResumeLayout(false);
-            this.generalPanel.PerformLayout();
-            this.generalGroup.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.toggleGeneral)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.generalPicture)).EndInit();
-            this.bigflow.ResumeLayout(false);
-            this.bigflow.PerformLayout();
-            this.shortCutsPanel.ResumeLayout(false);
-            this.shortCutsPanel.PerformLayout();
-            this.shortCutsGroup.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.toggleShortcuts)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shortCutsPicture)).EndInit();
-            this.corePanel.ResumeLayout(false);
-            this.corePanel.PerformLayout();
-            this.coreGroup.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.toggleCore)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.corePicture)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.settingsGroup.ResumeLayout(false);
-            this.settingsTab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.toggleSettings)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.settingsPicture)).EndInit();
+            this.uxGeneralPanel.ResumeLayout(false);
+            this.uxGeneralPanel.PerformLayout();
+            this.uxGeneralGroup.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.uxToggleGeneral)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uxGeneralPicture)).EndInit();
+            this.uxBigflow.ResumeLayout(false);
+            this.uxBigflow.PerformLayout();
+            this.uxShortcutsPanel.ResumeLayout(false);
+            this.uxShortcutsPanel.PerformLayout();
+            this.uxShortcutsGroup.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.uxToggleShortcuts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uxShortcutsPicture)).EndInit();
+            this.uxCorePanel.ResumeLayout(false);
+            this.uxCorePanel.PerformLayout();
+            this.uxCoreGroup.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.uxToggleCore)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uxCorePicture)).EndInit();
+            this.uxMainPanel.ResumeLayout(false);
+            this.uxMainPanel.PerformLayout();
+            this.uxSettingsGroup.ResumeLayout(false);
+            this.uxSettingsTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.uxToggleSettings)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uxSettingsPicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -866,34 +868,34 @@
 
         #endregion
 
-        private System.Windows.Forms.NotifyIcon trayIcon;
+        private System.Windows.Forms.NotifyIcon uxTray;
         private System.Windows.Forms.ContextMenuStrip trayContextMenu;
         private System.Windows.Forms.ToolStripMenuItem ExitMenu;
-        private System.Windows.Forms.Button cavebotButton;
-        private System.Windows.Forms.Button chargerButton;
-        private System.Windows.Forms.Button makerButton;
-        private System.Windows.Forms.Button healingButton;
-        private System.Windows.Forms.Button looterButton;
-        private System.Windows.Forms.Button targetingButton;
-        private System.Windows.Forms.Button contextButton;
-        private System.Windows.Forms.Button hotkeysButton;
-        private System.Windows.Forms.Button commandsButton;
-        private System.Windows.Forms.Button iconsButton;
-        private System.Windows.Forms.PictureBox toggleCore;
-        private System.Windows.Forms.PictureBox corePicture;
-        private System.Windows.Forms.PictureBox generalPicture;
-        private System.Windows.Forms.PictureBox toggleGeneral;
-        private System.Windows.Forms.Panel generalPanel;
-        private System.Windows.Forms.Button toolsButton;
-        private System.Windows.Forms.Button statisticsButton;
-        private System.Windows.Forms.FlowLayoutPanel generalGroup;
-        private System.Windows.Forms.FlowLayoutPanel bigflow;
-        private System.Windows.Forms.Panel shortCutsPanel;
-        private System.Windows.Forms.FlowLayoutPanel shortCutsGroup;
-        private System.Windows.Forms.PictureBox toggleShortcuts;
-        private System.Windows.Forms.PictureBox shortCutsPicture;
-        private System.Windows.Forms.Panel corePanel;
-        private System.Windows.Forms.FlowLayoutPanel coreGroup;
+        private System.Windows.Forms.Button uxCavebotButton;
+        private System.Windows.Forms.Button uxChargerButton;
+        private System.Windows.Forms.Button uxMakerButton;
+        private System.Windows.Forms.Button uxHealingButton;
+        private System.Windows.Forms.Button uxLooterButton;
+        private System.Windows.Forms.Button uxTargetingButton;
+        private System.Windows.Forms.Button uxContextButton;
+        private System.Windows.Forms.Button uxHotkeysButton;
+        private System.Windows.Forms.Button uxCommandsButton;
+        private System.Windows.Forms.Button uxIconsButton;
+        private System.Windows.Forms.PictureBox uxCorePicture;
+        private System.Windows.Forms.PictureBox uxToggleCore;
+        private System.Windows.Forms.PictureBox uxGeneralPicture;
+        private System.Windows.Forms.PictureBox uxToggleGeneral;
+        private System.Windows.Forms.Panel uxGeneralPanel;
+        private System.Windows.Forms.Button uxToolsButton;
+        private System.Windows.Forms.Button uxStatisticsButton;
+        private System.Windows.Forms.FlowLayoutPanel uxGeneralGroup;
+        private System.Windows.Forms.FlowLayoutPanel uxBigflow;
+        private System.Windows.Forms.Panel uxShortcutsPanel;
+        private System.Windows.Forms.FlowLayoutPanel uxShortcutsGroup;
+        private System.Windows.Forms.PictureBox uxToggleShortcuts;
+        private System.Windows.Forms.PictureBox uxShortcutsPicture;
+        private System.Windows.Forms.Panel uxCorePanel;
+        private System.Windows.Forms.FlowLayoutPanel uxCoreGroup;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
@@ -923,19 +925,19 @@
         private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.FlowLayoutPanel settingsGroup;
-        private System.Windows.Forms.Button saveButton;
-        private System.Windows.Forms.Button loadButton;
-        private System.Windows.Forms.PictureBox toggleSettings;
-        private System.Windows.Forms.PictureBox settingsPicture;
-        private System.Windows.Forms.TabControl settingsTab;
-        private System.Windows.Forms.TabPage tab1;
-        private System.Windows.Forms.TabPage tab2;
-        private System.Windows.Forms.TabPage tab3;
-        private System.Windows.Forms.TabPage tab4;
-        private System.Windows.Forms.TabPage tab5;
-        private System.Windows.Forms.TabPage tabCustom;
+        private System.Windows.Forms.Panel uxMainPanel;
+        private System.Windows.Forms.FlowLayoutPanel uxSettingsGroup;
+        private System.Windows.Forms.Button uxSaveButton;
+        private System.Windows.Forms.Button uxLoadButton;
+        private System.Windows.Forms.PictureBox uxToggleSettings;
+        private System.Windows.Forms.PictureBox uxSettingsPicture;
+        private System.Windows.Forms.TabControl uxSettingsTab;
+        private System.Windows.Forms.TabPage uxTab1;
+        private System.Windows.Forms.TabPage uxTab2;
+        private System.Windows.Forms.TabPage uxTab3;
+        private System.Windows.Forms.TabPage uxTab4;
+        private System.Windows.Forms.TabPage uxTab5;
+        private System.Windows.Forms.TabPage uxTabCustom;
 
 
 
