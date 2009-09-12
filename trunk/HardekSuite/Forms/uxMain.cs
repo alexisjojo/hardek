@@ -33,46 +33,46 @@ namespace HardekSuite.Forms {
         }
 
         private void toggleShortcuts_Click(object sender, EventArgs e) {
-            if (shortCutsGroup.Visible) {
-                toggleShortcuts.Image = (Image)HardekSuite.Properties.Resources.maximize;
-                shortCutsGroup.Hide();
+            if (uxShortcutsGroup.Visible) {
+                uxToggleShortcuts.Image = (Image)HardekSuite.Properties.Resources.maximize;
+                uxShortcutsGroup.Hide();
             }
             else {
-                toggleShortcuts.Image = (Image)HardekSuite.Properties.Resources.minimize;
-                shortCutsGroup.Show();
+                uxToggleShortcuts.Image = (Image)HardekSuite.Properties.Resources.minimize;
+                uxShortcutsGroup.Show();
             }
         }
 
         private void toggleGeneral_Click(object sender, EventArgs e) {
-            if (generalGroup.Visible) {
-                toggleGeneral.Image = (Image)HardekSuite.Properties.Resources.maximize;
-                generalGroup.Hide();
+            if (uxGeneralGroup.Visible) {
+                uxToggleGeneral.Image = (Image)HardekSuite.Properties.Resources.maximize;
+                uxGeneralGroup.Hide();
             }
             else {
-                toggleGeneral.Image = (Image)HardekSuite.Properties.Resources.minimize;
-                generalGroup.Show();
+                uxToggleGeneral.Image = (Image)HardekSuite.Properties.Resources.minimize;
+                uxGeneralGroup.Show();
             }
         }
 
         private void toggleCore_Click(object sender, EventArgs e) {
-            if (coreGroup.Visible) {
-                toggleCore.Image = (Image)HardekSuite.Properties.Resources.maximize;
-                coreGroup.Hide();
+            if (uxCoreGroup.Visible) {
+                uxToggleCore.Image = (Image)HardekSuite.Properties.Resources.maximize;
+                uxCoreGroup.Hide();
             }
             else {
-                toggleCore.Image = (Image)HardekSuite.Properties.Resources.minimize;
-                coreGroup.Show();
+                uxToggleCore.Image = (Image)HardekSuite.Properties.Resources.minimize;
+                uxCoreGroup.Show();
             }
         }
 
         private void toggleSettings_Click(object sender, EventArgs e) {
-            if (settingsGroup.Visible) {
-                toggleSettings.Image = (Image)HardekSuite.Properties.Resources.maximize;
-                settingsGroup.Hide();
+            if (uxSettingsGroup.Visible) {
+                uxToggleSettings.Image = (Image)HardekSuite.Properties.Resources.maximize;
+                uxSettingsGroup.Hide();
             }
             else {
-                toggleSettings.Image = (Image)HardekSuite.Properties.Resources.minimize;
-                settingsGroup.Show();
+                uxToggleSettings.Image = (Image)HardekSuite.Properties.Resources.minimize;
+                uxSettingsGroup.Show();
             }
         }
 
@@ -81,6 +81,23 @@ namespace HardekSuite.Forms {
                 Program.uxHealing = new Forms.uxHealing();
 
             Program.uxHealing.Show();
+        }
+
+        private void uxCommandsButton_Click(object sender, EventArgs e)
+        {
+            Core.Modules.Looter.AddLootByRatio(10);
+            Core.Modules.Looter.Looting = true;
+            Core.Modules.Targeting.AddAllCreatures(Kedrah.Constants.FightActions.Attack, 0, Kedrah.Constants.FightSecurity.Automatic, Kedrah.Constants.FightStances.Follow, Tibia.Constants.Attack.FullAttack, Tibia.Constants.Follow.FollowClose);
+            Core.Modules.Targeting.Attacker = true;
+            Core.Modules.General.EnableLevelSpyKeys();
+            Core.Modules.Cavebot.Shovel = Tibia.Constants.Items.Tool.LightShovel;
+            Core.Modules.Cavebot.Rope = Tibia.Constants.Items.Tool.ElvenhairRope;
+            Core.Modules.Cavebot.Walk = true;
+        }
+
+        private void uxContextButton_Click(object sender, EventArgs e)
+        {
+            Core.Modules.Cavebot.Waypoints.Add(new Kedrah.Objects.Waypoint(Core.Player.Location, Kedrah.Constants.WaypointType.Node, Core));
         }
     }
 }

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KedrahCore", "..\KedrahCore
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartAutoLooter", "..\TibiaAPI\apps\Smart AutoLooter\SmartAutoLooter.csproj", "{3D68C009-C8A6-4886-9056-C4184F4BA45F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartDataGenerator", "..\TibiaAPI\apps\SmartDataGenerator\SmartDataGenerator.csproj", "{4CE5A58A-A852-4D2D-BF05-07365E0C1E48}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,16 @@ Global
 		{3D68C009-C8A6-4886-9056-C4184F4BA45F}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{3D68C009-C8A6-4886-9056-C4184F4BA45F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{3D68C009-C8A6-4886-9056-C4184F4BA45F}.Release|Win32.ActiveCfg = Release|Any CPU
+		{4CE5A58A-A852-4D2D-BF05-07365E0C1E48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CE5A58A-A852-4D2D-BF05-07365E0C1E48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CE5A58A-A852-4D2D-BF05-07365E0C1E48}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{4CE5A58A-A852-4D2D-BF05-07365E0C1E48}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{4CE5A58A-A852-4D2D-BF05-07365E0C1E48}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{4CE5A58A-A852-4D2D-BF05-07365E0C1E48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CE5A58A-A852-4D2D-BF05-07365E0C1E48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CE5A58A-A852-4D2D-BF05-07365E0C1E48}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{4CE5A58A-A852-4D2D-BF05-07365E0C1E48}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{4CE5A58A-A852-4D2D-BF05-07365E0C1E48}.Release|Win32.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
