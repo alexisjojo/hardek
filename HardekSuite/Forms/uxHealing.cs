@@ -14,7 +14,7 @@ namespace HardekSuite.Forms
 {
     public partial class uxHealing : Form
     {
-        private Kedrah.Core Core = Program.Core;
+        private Kedrah.Core Kedrah = Program.Core;
         private string healSpell = null;
         private uint manaHealSpell = 0;
 
@@ -84,10 +84,10 @@ namespace HardekSuite.Forms
             uxSpellWords.LostFocus += new EventHandler(spellHealth_Leave);
             uxSpellWords.GotFocus += new EventHandler(spellHealth_Enter);
 
-            uxEnable.Enabled = Core.Client.LoggedIn;
+            uxEnable.Enabled = Kedrah.Client.LoggedIn;
 
-            Core.Proxy.PlayerLogin += new EventHandler(OnLogin);
-            Core.Proxy.PlayerLogout += new EventHandler(OnLogout);
+            Kedrah.Proxy.PlayerLogin += new EventHandler(OnLogin);
+            Kedrah.Proxy.PlayerLogout += new EventHandler(OnLogout);
         }
 
         private void OnLogin(object sender, EventArgs e)
@@ -100,16 +100,14 @@ namespace HardekSuite.Forms
             uxEnable.BeginInvoke(new Action(delegate() { uxEnable.Enabled = uxEnable.Checked = false; }));
         }
 
-        private void addToUxList(string sufix, int percent, ref ListBox list)
+        private void addToUxList(string action, int percent, string mana, string list)
         {
-            string p = percent.ToString();
+            uxList.Items.Add(new ListViewItem(new string[] { percent.ToString(), action, mana.ToString() }, uxList.Groups[list]));
+        }
 
-            while (p.Length < 4)
-            {
-                p = " " + p;
-            }
-
-            list.Items.Add(p + "%  -  " + sufix);
+        private void addToUxList(string action, int percent, string list)
+        {
+            addToUxList(action, percent, "--", list);
         }
 
         private void addMana(object sender, EventArgs e)
@@ -120,8 +118,8 @@ namespace HardekSuite.Forms
 
             if (item != null)
             {
-                Core.Modules.Heal.PotionMana.Add(new HealPercent((byte)uxPercent.Value, item));
-                addToUxList(item.Name, uxPercent.Value, ref uxManaList);
+                Kedrah.Modules.Heal.PotionMana.Add(new HealPercent((byte)uxPercent.Value, item));
+                addToUxList(item.Name, uxPercent.Value, "uxGroupMana");
             }
             else
             {
@@ -137,8 +135,8 @@ namespace HardekSuite.Forms
             {
                 if ((healSpell != null) && (manaHealSpell != 0))
                 {
-                    addToUxList("\"" + healSpell + "\" (" + manaHealSpell + " manapoints)", uxPercent.Value, ref uxHealthList);
-                    Core.Modules.Heal.SpellLife.Add(new HealPercent((byte)uxPercent.Value, healSpell, manaHealSpell));
+                    addToUxList("Spell: \"" + healSpell + "\"", uxPercent.Value, manaHealSpell.ToString(), "uxGroupHealth");
+                    Kedrah.Modules.Heal.SpellLife.Add(new HealPercent((byte)uxPercent.Value, healSpell, manaHealSpell));
                 }
                 else
                 {
@@ -151,7 +149,7 @@ namespace HardekSuite.Forms
 
                 if (item != null)
                 {
-                    Core.Modules.Heal.PotionLife.Add(new HealPercent((byte)uxPercent.Value, item));
+                    Kedrah.Modules.Heal.PotionLife.Add(new HealPercent((byte)uxPercent.Value, item));
                 }
                 else
                 {
@@ -159,7 +157,7 @@ namespace HardekSuite.Forms
 
                     if (item != null)
                     {
-                        Core.Modules.Heal.RuneLife.Add(new HealPercent((byte)uxPercent.Value, item));
+                        Kedrah.Modules.Heal.RuneLife.Add(new HealPercent((byte)uxPercent.Value, item));
                     }
                 }
 
@@ -169,7 +167,7 @@ namespace HardekSuite.Forms
                 }
                 else
                 {
-                    addToUxList(item.Name, uxPercent.Value, ref uxHealthList);
+                    addToUxList(item.Name, uxPercent.Value, "uxGroupHealth");
                 }
             }
         }
@@ -222,40 +220,43 @@ namespace HardekSuite.Forms
 
         private void paralyzeCheck_CheckedChanged(object sender, EventArgs e)
         {
-            Core.Modules.Heal.Paralyze = paralyzeCheck.Checked;
+            Kedrah.Modules.Heal.Paralyze = paralyzeCheck.Checked;
         }
 
         private void antidoteCheck_CheckedChanged(object sender, EventArgs e)
         {
-            Core.Modules.Heal.Poison = antidoteCheck.Checked;
+            Kedrah.Modules.Heal.Poison = antidoteCheck.Checked;
         }
 
         private void spellExhaustionText_TextChanged(object sender, EventArgs e)
         {
-            Core.Modules.Heal.SpellExhaustion = ushort.Parse(spellExhaustionText.Text);
+            Kedrah.Modules.Heal.SpellExhaustion = ushort.Parse(spellExhaustionText.Text);
         }
 
         private void potionExhaustionText_TextChanged(object sender, EventArgs e)
         {
-            Core.Modules.Heal.PotionExhaustion = ushort.Parse(potionExhaustionText.Text);
+            Kedrah.Modules.Heal.PotionExhaustion = ushort.Parse(potionExhaustionText.Text);
         }
 
-        private void uxHealthDelete_Click(object sender, EventArgs e)
+        private void uxDelete_Click(object sender, EventArgs e)
         {
-            foreach (string item in uxHealthList.SelectedItems)
+            foreach (ListViewItem item in uxList.SelectedItems)
             {
-                if (!Core.Modules.Heal.SpellLife.Remove(Core.Modules.Heal.SpellLife.FirstOrDefault(i => item.Contains(i.Spell))))
+                if (!Kedrah.Modules.Heal.SpellLife.Remove(Kedrah.Modules.Heal.SpellLife.FirstOrDefault(i => item.SubItems[1].Text.Contains(i.Spell))))
                 {
-                    if (!Core.Modules.Heal.RuneLife.Remove(Core.Modules.Heal.RuneLife.FirstOrDefault(i => item.Contains(i.Item.Name))))
+                    if (!Kedrah.Modules.Heal.RuneLife.Remove(Kedrah.Modules.Heal.RuneLife.FirstOrDefault(i => item.SubItems[1].Text.Contains(i.Item.Name))))
                     {
-                        Core.Modules.Heal.PotionLife.Remove(Core.Modules.Heal.PotionLife.FirstOrDefault(i => item.Contains(i.Item.Name)));
+                        if (!Kedrah.Modules.Heal.PotionLife.Remove(Kedrah.Modules.Heal.PotionLife.FirstOrDefault(i => item.SubItems[1].Text.Contains(i.Item.Name))))
+                        {
+                            Kedrah.Modules.Heal.PotionMana.Remove(Kedrah.Modules.Heal.PotionMana.FirstOrDefault(i => item.SubItems[1].Text.Contains(i.Item.Name)));
+                        }
                     }
                 }
             }
 
-            while (uxHealthList.SelectedItem != null)
+            while (uxList.SelectedItems.Count > 0)
             {
-                uxHealthList.Items.RemoveAt(uxHealthList.SelectedIndex);
+                uxList.Items.RemoveAt(uxList.SelectedIndices[0]);
             }
         }
 
@@ -267,20 +268,16 @@ namespace HardekSuite.Forms
             }
 
             uxEnable.Enabled = true;
-            Core.Modules.Heal.Healer = uxEnable.Checked;
+            Kedrah.Modules.Heal.Healer = uxEnable.Checked;
         }
 
-        private void uxManaDelete_Click(object sender, EventArgs e)
+        private void uxClear_Click(object sender, EventArgs e)
         {
-            foreach (string item in uxManaList.SelectedItems)
-            {
-                Core.Modules.Heal.PotionMana.Remove(Core.Modules.Heal.PotionMana.FirstOrDefault(i => item.Contains(i.Item.Name)));
-            }
-
-            while (uxManaList.SelectedItem != null)
-            {
-                uxManaList.Items.RemoveAt(uxManaList.SelectedIndex);
-            }
+            Kedrah.Modules.Heal.PotionLife.Clear();
+            Kedrah.Modules.Heal.PotionMana.Clear();
+            Kedrah.Modules.Heal.RuneLife.Clear();
+            Kedrah.Modules.Heal.SpellLife.Clear();
+            uxList.Clear();
         }
     }
 }
