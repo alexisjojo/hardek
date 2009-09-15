@@ -33,7 +33,7 @@ namespace HardekSuite.Forms
 
         private void addHealthButton_Click(object sender, EventArgs e)
         {
-            uxHealthMenu.Show(uxHealthAdd, ((MouseEventArgs)e).Location);
+            uxHealthMenu.Show(uxHealthAdd, new Point(uxHealthAdd.Width / 2, uxHealthAdd.Height / 2));
         }
 
         private void manaSpellHealth_Enter(object sender, EventArgs e)
@@ -183,12 +183,15 @@ namespace HardekSuite.Forms
                     uxSpellWords.Focus();
                 }
                 else
+                {
                     if (System.Text.RegularExpressions.Regex.IsMatch(sender.ToString(), "\\d+"))
                     {
                         e.Handled = true;
                         manaHealSpell = uint.Parse(sender.ToString());
                         addHealth(uxAddSpellHealth, e);
+                        uxHealthMenu.Hide();
                     }
+                }
             }
             else
             {
@@ -210,7 +213,7 @@ namespace HardekSuite.Forms
 
         private void uxMana_Click(object sender, EventArgs e)
         {
-            uxManaMenu.Show(uxManaAdd, ((MouseEventArgs)e).Location);
+            uxManaMenu.Show(uxManaAdd, new Point(uxManaAdd.Width / 2, uxManaAdd.Height / 2));
         }
 
         private void uxPercent_Scroll(object sender, ScrollEventArgs e)
@@ -277,7 +280,7 @@ namespace HardekSuite.Forms
             Kedrah.Modules.Heal.PotionMana.Clear();
             Kedrah.Modules.Heal.RuneLife.Clear();
             Kedrah.Modules.Heal.SpellLife.Clear();
-            uxList.Clear();
+            uxList.Items.Clear();
         }
     }
 }
