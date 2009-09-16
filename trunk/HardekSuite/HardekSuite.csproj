@@ -147,6 +147,18 @@
       <Project>{4D132EB7-B97D-461D-85CF-949FF5A7BA96}</Project>
       <Name>TibiaAPI</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Code Editor\CodeEditor\CodeEditor.csproj">
+      <Project>{94BFA44A-F4D0-4605-88E6-3ADD498F5E16}</Project>
+      <Name>CodeEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Code Editor\SyntaxDocument\CodeEditor.SyntaxDocument.csproj">
+      <Project>{3F43BAB0-22B4-4FD6-9655-8BA214A093A5}</Project>
+      <Name>CodeEditor.SyntaxDocument</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Code Editor\SyntaxFiles\CodeEditor.SyntaxFiles.csproj">
+      <Project>{3814F627-858A-42A3-9AAF-CD649413F2A8}</Project>
+      <Name>CodeEditor.SyntaxFiles</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
