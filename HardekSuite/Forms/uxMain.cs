@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using AIMS.Libraries.CodeEditor.SyntaxFiles;
+using AIMS.Libraries.CodeEditor.Syntax;
 
 namespace HardekSuite.Forms {
     public partial class uxMain : Form {
@@ -14,6 +16,7 @@ namespace HardekSuite.Forms {
 
         public uxMain() {
             InitializeComponent();
+            CodeEditorSyntaxLoader.SetSyntax(uxCode, SyntaxLanguage.CSharp);
         }
 
         private void trayIcon_MouseDoubleClick(object sender, MouseEventArgs e) {
@@ -98,6 +101,20 @@ namespace HardekSuite.Forms {
         private void uxContextButton_Click(object sender, EventArgs e)
         {
             Core.Modules.Cavebot.Waypoints.Add(new Kedrah.Objects.Waypoint(Core.Player.Location, Kedrah.Constants.WaypointType.Node, Core));
+        }
+
+        private void uxLoadButton_Click(object sender, EventArgs e)
+        {
+            string source = Kedrah.Objects.Script.GenerateFromScript("test", uxSyntax.Text);
+            Core.Modules.Scripter.LoadScriptFromSource(source, Core.Modules.Scripter.CSharpCodeProvider);
+            if (Core.Modules.Scripter.ErrorLog == string.Empty)
+            {
+                Core.Modules.Scripter.Run("test");
+            }
+            else
+            {
+                MessageBox.Show(Core.Modules.Scripter.ErrorLog);
+            }
         }
     }
 }
