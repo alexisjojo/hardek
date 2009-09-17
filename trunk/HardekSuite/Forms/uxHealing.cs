@@ -267,6 +267,12 @@ namespace HardekSuite.Forms
         {
             foreach (Control c in this.Controls)
             {
+                if (c == uxEnable.Parent) continue;
+                c.Enabled = !uxEnable.Checked;
+            }
+
+            foreach (Control c in uxEnable.Parent.Controls)
+            {
                 c.Enabled = !uxEnable.Checked;
             }
 
@@ -281,6 +287,12 @@ namespace HardekSuite.Forms
             Kedrah.Modules.Heal.RuneLife.Clear();
             Kedrah.Modules.Heal.SpellLife.Clear();
             uxList.Items.Clear();
+        }
+
+        private void uxHealing_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            this.Hide();
         }
     }
 }
