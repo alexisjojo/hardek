@@ -25,8 +25,8 @@
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uxHealing));
-            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("Health", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("Mana", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Health", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Mana", System.Windows.Forms.HorizontalAlignment.Left);
             this.potionExhaustionText = new System.Windows.Forms.TextBox();
             this.potionExhaustionLabel = new System.Windows.Forms.Label();
             this.spellExhaustionLabel = new System.Windows.Forms.Label();
@@ -416,13 +416,13 @@
             this.uxColumnMana});
             this.uxList.FullRowSelect = true;
             this.uxList.GridLines = true;
-            listViewGroup3.Header = "Health";
-            listViewGroup3.Name = "uxGroupHealth";
-            listViewGroup4.Header = "Mana";
-            listViewGroup4.Name = "uxGroupMana";
+            listViewGroup1.Header = "Health";
+            listViewGroup1.Name = "uxGroupHealth";
+            listViewGroup2.Header = "Mana";
+            listViewGroup2.Name = "uxGroupMana";
             this.uxList.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup3,
-            listViewGroup4});
+            listViewGroup1,
+            listViewGroup2});
             this.uxList.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.uxList.Location = new System.Drawing.Point(12, 12);
             this.uxList.Name = "uxList";
@@ -483,6 +483,7 @@
             this.Text = "Healing";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.HealingForm_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.uxHealing_FormClosing);
             this.uxHealthMenu.ResumeLayout(false);
             this.uxManaMenu.ResumeLayout(false);
             this.uxOptions.ResumeLayout(false);
