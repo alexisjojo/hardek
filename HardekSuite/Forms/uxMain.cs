@@ -19,7 +19,6 @@ namespace HardekSuite.Forms
         public uxMain()
         {
             InitializeComponent();
-            CodeEditorSyntaxLoader.SetSyntax(uxCode, SyntaxLanguage.CSharp);
         }
 
         private void trayIcon_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -30,7 +29,8 @@ namespace HardekSuite.Forms
         private void ExitMenu_Click(object sender, EventArgs e)
         {
             close = true;
-            Application.Exit();
+            uxTray.Visible = false;
+            Environment.Exit(0);
         }
 
         private void uxMain_FormClosing(object sender, FormClosingEventArgs e)
@@ -106,45 +106,32 @@ namespace HardekSuite.Forms
             Program.uxHealing.Show();
         }
 
-        private void uxContextButton_Click(object sender, EventArgs e)
-        {
-            Core.Modules.Cavebot.Waypoints.Add(new Kedrah.Objects.Waypoint(Core.Player.Location, Kedrah.Constants.WaypointType.Node, Core));
-        }
-
-        private void uxLoadButton_Click(object sender, EventArgs e)
-        {
-            string source = Kedrah.Objects.Script.GenerateFromScript("test", uxSyntax.Text);
-            Core.Modules.Scripter.LoadScriptFromSource(source, Core.Modules.Scripter.CSharpCodeProvider);
-            if (Core.Modules.Scripter.ErrorLog == string.Empty)
-            {
-                Core.Modules.Scripter.Run("test");
-            }
-            else
-            {
-                MessageBox.Show(Core.Modules.Scripter.ErrorLog);
-            }
-        }
-
         private void uxTargetingButton_Click(object sender, EventArgs e)
         {
-            Core.Modules.Looter.AddLootByRatio(10);
-            Core.Modules.Looter.OpenBodies = Kedrah.Constants.OpenBodyRule.None;
-            Core.Modules.Looter.Looting = true;
-            Core.Modules.General.EnableLevelSpyKeys();
-            Core.Modules.General.EatFood = true;
-            Core.Modules.General.ClickReuse = true;
-            Core.Modules.General.OpenSmall = true;
-            Tibia.KeyboardHook.Add(Keys.Insert, new Tibia.KeyboardHook.KeyPressed(delegate()
+            if (Program.uxTargeting == null)
+                Program.uxTargeting = new Forms.uxTargeting();
+
+            Program.uxTargeting.Show();
+        }
+
+        private void uxLooterButton_Click(object sender, EventArgs e)
+        {
+            if (Program.uxLoot == null)
+                Program.uxLoot = new Forms.uxLoot();
+
+            Program.uxLoot.Show();
+        }
+
+        private void uxTimer_Tick(object sender, EventArgs e)
+        {
+            if (!Core.Client.Window.IsActive && TopMost)
             {
-                if (Core.Client.Window.IsActive)
-                {
-                    if (Core.Player.RedSquare != 0)
-                    {
-                        Core.Client.Console.Say(Core.Modules.Targeting.GetBestMageSpell(Core.Client.BattleList.GetCreatures().FirstOrDefault(c => c.Id == Core.Player.RedSquare).Data));
-                    }
-                }
-                return true;
-            }));
+                TopMost = false;
+            }
+            else if (Core.Client.Window.IsActive && !TopMost)
+            {
+                TopMost = true;
+            }
         }
     }
 }

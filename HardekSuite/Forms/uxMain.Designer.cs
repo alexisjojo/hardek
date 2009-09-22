@@ -25,7 +25,6 @@
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uxMain));
-            AIMS.Libraries.CodeEditor.WinForms.LineMarginRender lineMarginRender2 = new AIMS.Libraries.CodeEditor.WinForms.LineMarginRender();
             this.uxTray = new System.Windows.Forms.NotifyIcon(this.components);
             this.trayContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ExitMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,7 +66,6 @@
             this.uxLoadButton = new System.Windows.Forms.Button();
             this.uxToggleSettings = new System.Windows.Forms.PictureBox();
             this.uxSettingsPicture = new System.Windows.Forms.PictureBox();
-            this.uxCode = new AIMS.Libraries.CodeEditor.CodeEditorControl();
             this.uxSyntax = new AIMS.Libraries.CodeEditor.Syntax.SyntaxDocument(this.components);
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -98,6 +96,7 @@
             this.cutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.uxTimer = new System.Windows.Forms.Timer(this.components);
             this.trayContextMenu.SuspendLayout();
             this.uxGeneralPanel.SuspendLayout();
             this.uxGeneralGroup.SuspendLayout();
@@ -229,7 +228,7 @@
             this.uxBigflow.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.uxBigflow.Location = new System.Drawing.Point(0, 0);
             this.uxBigflow.Name = "uxBigflow";
-            this.uxBigflow.Size = new System.Drawing.Size(217, 717);
+            this.uxBigflow.Size = new System.Drawing.Size(217, 504);
             this.uxBigflow.TabIndex = 16;
             // 
             // uxShortcutsPanel
@@ -298,7 +297,6 @@
             this.uxContextButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.uxContextButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.uxContextButton.UseVisualStyleBackColor = true;
-            this.uxContextButton.Click += new System.EventHandler(this.uxContextButton_Click);
             // 
             // uxIconsButton
             // 
@@ -433,6 +431,7 @@
             this.uxLooterButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.uxLooterButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.uxLooterButton.UseVisualStyleBackColor = true;
+            this.uxLooterButton.Click += new System.EventHandler(this.uxLooterButton_Click);
             // 
             // uxMakerButton
             // 
@@ -479,7 +478,7 @@
             this.uxMainPanel.Location = new System.Drawing.Point(0, 396);
             this.uxMainPanel.Margin = new System.Windows.Forms.Padding(0);
             this.uxMainPanel.Name = "uxMainPanel";
-            this.uxMainPanel.Size = new System.Drawing.Size(216, 318);
+            this.uxMainPanel.Size = new System.Drawing.Size(216, 106);
             this.uxMainPanel.TabIndex = 18;
             // 
             // uxSettingsGroup
@@ -489,12 +488,11 @@
             this.uxSettingsGroup.Controls.Add(this.uxSettingsTab);
             this.uxSettingsGroup.Controls.Add(this.uxSaveButton);
             this.uxSettingsGroup.Controls.Add(this.uxLoadButton);
-            this.uxSettingsGroup.Controls.Add(this.uxCode);
             this.uxSettingsGroup.Location = new System.Drawing.Point(3, 37);
             this.uxSettingsGroup.MaximumSize = new System.Drawing.Size(210, 0);
             this.uxSettingsGroup.MinimumSize = new System.Drawing.Size(210, 0);
             this.uxSettingsGroup.Name = "uxSettingsGroup";
-            this.uxSettingsGroup.Size = new System.Drawing.Size(210, 278);
+            this.uxSettingsGroup.Size = new System.Drawing.Size(210, 66);
             this.uxSettingsGroup.TabIndex = 20;
             // 
             // uxSettingsTab
@@ -598,7 +596,6 @@
             this.uxLoadButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.uxLoadButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.uxLoadButton.UseVisualStyleBackColor = true;
-            this.uxLoadButton.Click += new System.EventHandler(this.uxLoadButton_Click);
             // 
             // uxToggleSettings
             // 
@@ -621,36 +618,6 @@
             this.uxSettingsPicture.TabIndex = 12;
             this.uxSettingsPicture.TabStop = false;
             this.uxSettingsPicture.Click += new System.EventHandler(this.toggleSettings_Click);
-            // 
-            // uxCode
-            // 
-            this.uxCode.ActiveView = AIMS.Libraries.CodeEditor.WinForms.ActiveView.BottomRight;
-            this.uxCode.AutoListPosition = null;
-            this.uxCode.AutoListSelectedText = "";
-            this.uxCode.AutoListVisible = false;
-            this.uxCode.CopyAsRTF = false;
-            this.uxCode.Document = this.uxSyntax;
-            this.uxCode.FileName = null;
-            this.uxCode.InfoTipCount = 1;
-            this.uxCode.InfoTipPosition = null;
-            this.uxCode.InfoTipSelectedIndex = 1;
-            this.uxCode.InfoTipVisible = false;
-            lineMarginRender2.Bounds = new System.Drawing.Rectangle(19, 0, 19, 16);
-            this.uxCode.LineMarginRender = lineMarginRender2;
-            this.uxCode.Location = new System.Drawing.Point(3, 69);
-            this.uxCode.LockCursorUpdate = false;
-            this.uxCode.Name = "uxCode";
-            this.uxCode.ParseOnPaste = true;
-            this.uxCode.Saved = false;
-            this.uxCode.ShowScopeIndicator = false;
-            this.uxCode.Size = new System.Drawing.Size(213, 206);
-            this.uxCode.SmoothScroll = true;
-            this.uxCode.SplitView = false;
-            this.uxCode.SplitviewH = -4;
-            this.uxCode.SplitviewV = -4;
-            this.uxCode.TabGuideColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(231)))), ((int)(((byte)(237)))));
-            this.uxCode.TabIndex = 19;
-            this.uxCode.WhitespaceColor = System.Drawing.SystemColors.ControlDark;
             // 
             // uxSyntax
             // 
@@ -862,13 +829,18 @@
             this.pasteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.pasteToolStripMenuItem.Text = "&Paste";
             // 
+            // uxTimer
+            // 
+            this.uxTimer.Enabled = true;
+            this.uxTimer.Tick += new System.EventHandler(this.uxTimer_Tick);
+            // 
             // uxMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(217, 717);
+            this.ClientSize = new System.Drawing.Size(217, 504);
             this.Controls.Add(this.uxBigflow);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -981,8 +953,8 @@
         private System.Windows.Forms.TabPage uxTab4;
         private System.Windows.Forms.TabPage uxTab5;
         private System.Windows.Forms.TabPage uxTabCustom;
-        private AIMS.Libraries.CodeEditor.CodeEditorControl uxCode;
         private AIMS.Libraries.CodeEditor.Syntax.SyntaxDocument uxSyntax;
+        private System.Windows.Forms.Timer uxTimer;
 
 
 

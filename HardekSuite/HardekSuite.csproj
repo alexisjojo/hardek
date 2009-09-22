@@ -79,6 +79,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\uxLoot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\uxLoot.Designer.cs">
+      <DependentUpon>uxLoot.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\uxHealing.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,14 +97,26 @@
     <Compile Include="Forms\uxMain.Designer.cs">
       <DependentUpon>uxMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\uxTargeting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\uxTargeting.Designer.cs">
+      <DependentUpon>uxTargeting.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\uxLoot.resx">
+      <DependentUpon>uxLoot.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\uxHealing.resx">
       <DependentUpon>uxHealing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\uxMain.resx">
       <DependentUpon>uxMain.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\uxTargeting.resx">
+      <DependentUpon>uxTargeting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
