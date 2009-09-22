@@ -257,8 +257,8 @@
             this.uxSpellMana.Tag = "Mana Cost";
             this.uxSpellMana.Text = "Mana Cost";
             this.uxSpellMana.Leave += new System.EventHandler(this.spellHealth_Leave);
+            this.uxSpellMana.KeyDown += new System.Windows.Forms.KeyEventHandler(this.uxSpellMana_KeyDown);
             this.uxSpellMana.Enter += new System.EventHandler(this.spellHealth_Enter);
-            this.uxSpellMana.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.manaSpellHealth_KeyPress);
             // 
             // uxAddSpellHealth
             // 
@@ -401,7 +401,7 @@
             this.uxDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uxDelete.Location = new System.Drawing.Point(12, 280);
             this.uxDelete.Name = "uxDelete";
-            this.uxDelete.Size = new System.Drawing.Size(128, 23);
+            this.uxDelete.Size = new System.Drawing.Size(124, 23);
             this.uxDelete.TabIndex = 14;
             this.uxDelete.Text = "Delete Selected";
             this.uxDelete.UseVisualStyleBackColor = true;
@@ -442,7 +442,7 @@
             // 
             this.uxColumnAction.DisplayIndex = 0;
             this.uxColumnAction.Text = "Action";
-            this.uxColumnAction.Width = 150;
+            this.uxColumnAction.Width = 142;
             // 
             // uxColumnMana
             // 
@@ -452,9 +452,9 @@
             // uxClear
             // 
             this.uxClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxClear.Location = new System.Drawing.Point(144, 280);
+            this.uxClear.Location = new System.Drawing.Point(142, 280);
             this.uxClear.Name = "uxClear";
-            this.uxClear.Size = new System.Drawing.Size(128, 23);
+            this.uxClear.Size = new System.Drawing.Size(124, 23);
             this.uxClear.TabIndex = 15;
             this.uxClear.Text = "Clear List";
             this.uxClear.UseVisualStyleBackColor = true;
@@ -465,14 +465,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(277, 408);
-            this.Controls.Add(this.uxClear);
             this.Controls.Add(this.uxList);
             this.Controls.Add(this.uxOptions);
             this.Controls.Add(this.uxPercent);
             this.Controls.Add(this.uxLabelPercent);
             this.Controls.Add(this.uxHealthAdd);
-            this.Controls.Add(this.uxDelete);
             this.Controls.Add(this.uxManaAdd);
+            this.Controls.Add(this.uxClear);
+            this.Controls.Add(this.uxDelete);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;

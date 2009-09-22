@@ -7,6 +7,8 @@ namespace HardekSuite {
     static class Program {
         static public Kedrah.Core Core;
         static public Forms.uxHealing uxHealing;
+        static public Forms.uxLoot uxLoot;
+        static public Forms.uxTargeting uxTargeting;
 
         [STAThread]
         static void Main() {

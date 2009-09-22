@@ -14,7 +14,7 @@ namespace HardekSuite.Forms
 {
     public partial class uxHealing : Form
     {
-        private Kedrah.Core Kedrah = Program.Core;
+        private Kedrah.Core Core = Program.Core;
         private string healSpell = null;
         private uint manaHealSpell = 0;
 
@@ -84,10 +84,10 @@ namespace HardekSuite.Forms
             uxSpellWords.LostFocus += new EventHandler(spellHealth_Leave);
             uxSpellWords.GotFocus += new EventHandler(spellHealth_Enter);
 
-            uxEnable.Enabled = Kedrah.Client.LoggedIn;
+            uxEnable.Enabled = Core.Client.LoggedIn;
 
-            Kedrah.Proxy.PlayerLogin += new EventHandler(OnLogin);
-            Kedrah.Proxy.PlayerLogout += new EventHandler(OnLogout);
+            Core.Proxy.PlayerLogin += new EventHandler(OnLogin);
+            Core.Proxy.PlayerLogout += new EventHandler(OnLogout);
         }
 
         private void OnLogin(object sender, EventArgs e)
@@ -118,7 +118,7 @@ namespace HardekSuite.Forms
 
             if (item != null)
             {
-                Kedrah.Modules.Heal.PotionMana.Add(new HealPercent((byte)uxPercent.Value, item));
+                Core.Modules.Heal.PotionMana.Add(new HealPercent((byte)uxPercent.Value, item));
                 addToUxList(item.Name, uxPercent.Value, "uxGroupMana");
             }
             else
@@ -136,7 +136,7 @@ namespace HardekSuite.Forms
                 if ((healSpell != null) && (manaHealSpell != 0))
                 {
                     addToUxList("Spell: \"" + healSpell + "\"", uxPercent.Value, manaHealSpell.ToString(), "uxGroupHealth");
-                    Kedrah.Modules.Heal.SpellLife.Add(new HealPercent((byte)uxPercent.Value, healSpell, manaHealSpell));
+                    Core.Modules.Heal.SpellLife.Add(new HealPercent((byte)uxPercent.Value, healSpell, manaHealSpell));
                 }
                 else
                 {
@@ -149,7 +149,7 @@ namespace HardekSuite.Forms
 
                 if (item != null)
                 {
-                    Kedrah.Modules.Heal.PotionLife.Add(new HealPercent((byte)uxPercent.Value, item));
+                    Core.Modules.Heal.PotionLife.Add(new HealPercent((byte)uxPercent.Value, item));
                 }
                 else
                 {
@@ -157,7 +157,7 @@ namespace HardekSuite.Forms
 
                     if (item != null)
                     {
-                        Kedrah.Modules.Heal.RuneLife.Add(new HealPercent((byte)uxPercent.Value, item));
+                        Core.Modules.Heal.RuneLife.Add(new HealPercent((byte)uxPercent.Value, item));
                     }
                 }
 
@@ -168,36 +168,6 @@ namespace HardekSuite.Forms
                 else
                 {
                     addToUxList(item.Name, uxPercent.Value, "uxGroupHealth");
-                }
-            }
-        }
-
-
-        private void manaSpellHealth_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)13)
-            {
-                e.Handled = true;
-                if (healSpell == null)
-                {
-                    uxSpellWords.Focus();
-                }
-                else
-                {
-                    if (System.Text.RegularExpressions.Regex.IsMatch(sender.ToString(), "\\d+"))
-                    {
-                        e.Handled = true;
-                        manaHealSpell = uint.Parse(sender.ToString());
-                        addHealth(uxAddSpellHealth, e);
-                        uxHealthMenu.Hide();
-                    }
-                }
-            }
-            else
-            {
-                if (!System.Text.RegularExpressions.Regex.IsMatch(e.KeyChar.ToString(), "\\d+"))
-                {
-                    e.Handled = true;
                 }
             }
         }
@@ -223,35 +193,35 @@ namespace HardekSuite.Forms
 
         private void paralyzeCheck_CheckedChanged(object sender, EventArgs e)
         {
-            Kedrah.Modules.Heal.Paralyze = paralyzeCheck.Checked;
+            Core.Modules.Heal.Paralyze = paralyzeCheck.Checked;
         }
 
         private void antidoteCheck_CheckedChanged(object sender, EventArgs e)
         {
-            Kedrah.Modules.Heal.Poison = antidoteCheck.Checked;
+            Core.Modules.Heal.Poison = antidoteCheck.Checked;
         }
 
         private void spellExhaustionText_TextChanged(object sender, EventArgs e)
         {
-            Kedrah.Modules.Heal.SpellExhaustion = ushort.Parse(spellExhaustionText.Text);
+            Core.Modules.Heal.SpellExhaustion = ushort.Parse(spellExhaustionText.Text);
         }
 
         private void potionExhaustionText_TextChanged(object sender, EventArgs e)
         {
-            Kedrah.Modules.Heal.PotionExhaustion = ushort.Parse(potionExhaustionText.Text);
+            Core.Modules.Heal.PotionExhaustion = ushort.Parse(potionExhaustionText.Text);
         }
 
         private void uxDelete_Click(object sender, EventArgs e)
         {
             foreach (ListViewItem item in uxList.SelectedItems)
             {
-                if (!Kedrah.Modules.Heal.SpellLife.Remove(Kedrah.Modules.Heal.SpellLife.FirstOrDefault(i => item.SubItems[1].Text.Contains(i.Spell))))
+                if (!Core.Modules.Heal.SpellLife.Remove(Core.Modules.Heal.SpellLife.FirstOrDefault(i => item.SubItems[1].Text.Contains(i.Spell))))
                 {
-                    if (!Kedrah.Modules.Heal.RuneLife.Remove(Kedrah.Modules.Heal.RuneLife.FirstOrDefault(i => item.SubItems[1].Text.Contains(i.Item.Name))))
+                    if (!Core.Modules.Heal.RuneLife.Remove(Core.Modules.Heal.RuneLife.FirstOrDefault(i => item.SubItems[1].Text.Contains(i.Item.Name))))
                     {
-                        if (!Kedrah.Modules.Heal.PotionLife.Remove(Kedrah.Modules.Heal.PotionLife.FirstOrDefault(i => item.SubItems[1].Text.Contains(i.Item.Name))))
+                        if (!Core.Modules.Heal.PotionLife.Remove(Core.Modules.Heal.PotionLife.FirstOrDefault(i => item.SubItems[1].Text.Contains(i.Item.Name))))
                         {
-                            Kedrah.Modules.Heal.PotionMana.Remove(Kedrah.Modules.Heal.PotionMana.FirstOrDefault(i => item.SubItems[1].Text.Contains(i.Item.Name)));
+                            Core.Modules.Heal.PotionMana.Remove(Core.Modules.Heal.PotionMana.FirstOrDefault(i => item.SubItems[1].Text.Contains(i.Item.Name)));
                         }
                     }
                 }
@@ -277,15 +247,15 @@ namespace HardekSuite.Forms
             }
 
             uxEnable.Enabled = true;
-            Kedrah.Modules.Heal.Healer = uxEnable.Checked;
+            Core.Modules.Heal.Healer = uxEnable.Checked;
         }
 
         private void uxClear_Click(object sender, EventArgs e)
         {
-            Kedrah.Modules.Heal.PotionLife.Clear();
-            Kedrah.Modules.Heal.PotionMana.Clear();
-            Kedrah.Modules.Heal.RuneLife.Clear();
-            Kedrah.Modules.Heal.SpellLife.Clear();
+            Core.Modules.Heal.PotionLife.Clear();
+            Core.Modules.Heal.PotionMana.Clear();
+            Core.Modules.Heal.RuneLife.Clear();
+            Core.Modules.Heal.SpellLife.Clear();
             uxList.Items.Clear();
         }
 
@@ -293,6 +263,34 @@ namespace HardekSuite.Forms
         {
             e.Cancel = true;
             this.Hide();
+        }
+
+        private void uxSpellMana_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                if (healSpell == null)
+                {
+                    uxSpellWords.Focus();
+                }
+                else
+                {
+                    if (System.Text.RegularExpressions.Regex.IsMatch(sender.ToString(), "\\d+"))
+                    {
+                        e.SuppressKeyPress = true;
+                        manaHealSpell = uint.Parse(sender.ToString());
+                        addHealth(uxAddSpellHealth, e);
+                        uxHealthMenu.Hide();
+                    }
+                }
+            }
+            else if (e.KeyData != Keys.Back)
+            {
+                if (!System.Text.RegularExpressions.Regex.IsMatch(e.KeyData.ToString(), "\\d+"))
+                {
+                    e.SuppressKeyPress = true;
+                }
+            }
         }
     }
 }
