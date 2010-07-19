@@ -76,6 +76,26 @@ namespace HardekSuite.Forms
             }
         }
 
+        private void uxKeyManaCost_Enter(object sender, EventArgs e)
+        {
+            uxKeyManaCost.ForeColor = System.Drawing.SystemColors.WindowText;
+            uxKeyManaCost.Text = "";
+        }
+
+        private void uxKeyManaCost_Leave(object sender, EventArgs e)
+        {
+            if (uxKeyManaCost.Text == "")
+            {
+                uxKeyManaCost.ForeColor = System.Drawing.SystemColors.GrayText;
+                uxKeyManaCost.Text = (string)uxKeyManaCost.Tag;
+                manaHealSpell = 0;
+            }
+            else
+            {
+                manaHealSpell = uint.Parse(uxKeyManaCost.Text);
+            }
+        }
+
         private void HealingForm_Load(object sender, EventArgs e)
         {
             uxSpellMana.LostFocus += new EventHandler(manaSpellHealth_Leave);
@@ -114,14 +134,36 @@ namespace HardekSuite.Forms
         {
             ToolStripMenuItem s = (ToolStripMenuItem)sender;
 
-            Item item = ItemLists.Potion.FirstOrDefault(i => string.Compare(i.Value.Name, s.Text, true) == 0).Value;
-
-            if (item != null)
+            try
             {
-                Core.Modules.Heal.PotionMana.Add(new HealPercent((byte)uxPercent.Value, item));
-                addToUxList(item.Name, uxPercent.Value, "uxGroupMana");
+                if (s.Name == "uxAddKeyMana")
+                {
+                    string[] keys = uxSelectKeyMana.Text.Replace(" + ", "Key ").Split(' ');
+                    List<Keys> keysk = new List<Keys>();
+                    foreach (string key in keys)
+                    {
+                        keysk.Add((Keys)Enum.Parse(typeof(Keys), key, true));
+                    }
+
+                    addToUxList("Hotkey: \"" + uxSelectKeyMana.Text + "\"", uxPercent.Value, "uxGroupMana");
+                    Core.Modules.Heal.PotionMana.Add(new HealPercent((byte)uxPercent.Value, keysk.ToArray()));
+                }
+                else
+                {
+                    Item item = ItemLists.Potion.FirstOrDefault(i => string.Compare(i.Value.Name, s.Text, true) == 0).Value;
+
+                    if (item != null)
+                    {
+                        Core.Modules.Heal.PotionMana.Add(new HealPercent((byte)uxPercent.Value, item));
+                        addToUxList(item.Name, uxPercent.Value, "uxGroupMana");
+                    }
+                    else
+                    {
+                        System.Windows.MessageBox.Show("Invalids parameters.", "Error", System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Exclamation);
+                    }
+                }
             }
-            else
+            catch
             {
                 System.Windows.MessageBox.Show("Invalids parameters.", "Error", System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Exclamation);
             }
@@ -130,45 +172,73 @@ namespace HardekSuite.Forms
         private void addHealth(object sender, EventArgs e)
         {
             ToolStripMenuItem s = (ToolStripMenuItem)sender;
-
-            if (s.Text.Contains("Add"))
+            try
             {
-                if ((healSpell != null) && (manaHealSpell != 0))
+                if (s.Text.Contains("Add"))
                 {
-                    addToUxList("Spell: \"" + healSpell + "\"", uxPercent.Value, manaHealSpell.ToString(), "uxGroupHealth");
-                    Core.Modules.Heal.SpellLife.Add(new HealPercent((byte)uxPercent.Value, healSpell, manaHealSpell));
+                    if (s.Name == "uxAddKeyHealth")
+                    {
+                        string[] keys = uxSeletKeyHealth.Text.Replace(" + ", "Key ").Split(' ');
+                        List<Keys> keysk = new List<Keys>();
+                        foreach (string key in keys)
+                        {
+                            keysk.Add((Keys)Enum.Parse(typeof(Keys), key, true));
+                        }
+                        if (manaHealSpell != 0)
+                        {
+                            addToUxList("Hotkey: \"" + uxSeletKeyHealth.Text + "\"", uxPercent.Value, manaHealSpell.ToString(), "uxGroupHealth");
+                            Core.Modules.Heal.SpellLife.Add(new HealPercent((byte)uxPercent.Value, manaHealSpell, keysk.ToArray()));
+                        }
+                        else
+                        {
+                            addToUxList("Hotkey: \"" + uxSeletKeyHealth.Text + "\"", uxPercent.Value, "uxGroupHealth");
+                            Core.Modules.Heal.PotionLife.Add(new HealPercent((byte)uxPercent.Value, keysk.ToArray()));
+                        }
+                    }
+                    else
+                    {
+                        if ((healSpell != null) && (manaHealSpell != 0))
+                        {
+                            addToUxList("Spell: \"" + healSpell + "\"", uxPercent.Value, manaHealSpell.ToString(), "uxGroupHealth");
+                            Core.Modules.Heal.SpellLife.Add(new HealPercent((byte)uxPercent.Value, healSpell, manaHealSpell));
+                        }
+                        else
+                        {
+                            System.Windows.MessageBox.Show("Invalids parameters.", "Error", System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Exclamation);
+                        }
+                    }
                 }
                 else
                 {
-                    System.Windows.MessageBox.Show("Invalids parameters.", "Error", System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Exclamation);
-                }
-            }
-            else
-            {
-                Item item = ItemLists.Potion.FirstOrDefault(i => string.Compare(i.Value.Name, s.Text, true) == 0).Value;
-
-                if (item != null)
-                {
-                    Core.Modules.Heal.PotionLife.Add(new HealPercent((byte)uxPercent.Value, item));
-                }
-                else
-                {
-                    item = ItemLists.Runes.FirstOrDefault(i => string.Compare(i.Value.Name, s.Text, true) == 0).Value;
+                    Item item = ItemLists.Potion.FirstOrDefault(i => string.Compare(i.Value.Name, s.Text, true) == 0).Value;
 
                     if (item != null)
                     {
-                        Core.Modules.Heal.RuneLife.Add(new HealPercent((byte)uxPercent.Value, item));
+                        Core.Modules.Heal.PotionLife.Add(new HealPercent((byte)uxPercent.Value, item));
+                    }
+                    else
+                    {
+                        item = ItemLists.Runes.FirstOrDefault(i => string.Compare(i.Value.Name, s.Text, true) == 0).Value;
+
+                        if (item != null)
+                        {
+                            Core.Modules.Heal.RuneLife.Add(new HealPercent((byte)uxPercent.Value, item));
+                        }
+                    }
+
+                    if (item == null)
+                    {
+                        System.Windows.MessageBox.Show("Invalids parameters.", "Error", System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Exclamation);
+                    }
+                    else
+                    {
+                        addToUxList(item.Name, uxPercent.Value, "uxGroupHealth");
                     }
                 }
-
-                if (item == null)
-                {
-                    System.Windows.MessageBox.Show("Invalids parameters.", "Error", System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Exclamation);
-                }
-                else
-                {
-                    addToUxList(item.Name, uxPercent.Value, "uxGroupHealth");
-                }
+            }
+            catch
+            {
+                System.Windows.MessageBox.Show("Invalids parameters.", "Error", System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Exclamation);
             }
         }
 
@@ -215,16 +285,32 @@ namespace HardekSuite.Forms
         {
             foreach (ListViewItem item in uxList.SelectedItems)
             {
-                if (!Core.Modules.Heal.SpellLife.Remove(Core.Modules.Heal.SpellLife.FirstOrDefault(i => item.SubItems[1].Text.Contains(i.Spell))))
+                try
                 {
-                    if (!Core.Modules.Heal.RuneLife.Remove(Core.Modules.Heal.RuneLife.FirstOrDefault(i => item.SubItems[1].Text.Contains(i.Item.Name))))
+                    if (!Core.Modules.Heal.PotionLife.Remove(Core.Modules.Heal.PotionLife.FirstOrDefault(i => item.SubItems[1].Text.Contains(i.Keys.FirstOrDefault().ToString()) && item.SubItems[1].Text.Contains(i.Keys.LastOrDefault().ToString()))))
                     {
-                        if (!Core.Modules.Heal.PotionLife.Remove(Core.Modules.Heal.PotionLife.FirstOrDefault(i => item.SubItems[1].Text.Contains(i.Item.Name))))
+                        if (!Core.Modules.Heal.RuneLife.Remove(Core.Modules.Heal.RuneLife.FirstOrDefault(i => item.SubItems[1].Text.Contains(i.Keys.FirstOrDefault().ToString()) && item.SubItems[1].Text.Contains(i.Keys.LastOrDefault().ToString()))))
                         {
-                            Core.Modules.Heal.PotionMana.Remove(Core.Modules.Heal.PotionMana.FirstOrDefault(i => item.SubItems[1].Text.Contains(i.Item.Name)));
+                            if (!Core.Modules.Heal.PotionMana.Remove(Core.Modules.Heal.PotionMana.FirstOrDefault(i => item.SubItems[1].Text.Contains(i.Keys.FirstOrDefault().ToString()) && item.SubItems[1].Text.Contains(i.Keys.LastOrDefault().ToString()))))
+                            {
+                                if (!Core.Modules.Heal.SpellLife.Remove(Core.Modules.Heal.SpellLife.FirstOrDefault(i => item.SubItems[1].Text.Contains(i.Keys.FirstOrDefault().ToString()) && item.SubItems[1].Text.Contains(i.Keys.LastOrDefault().ToString()))))
+                                {
+                                    if (!Core.Modules.Heal.SpellLife.Remove(Core.Modules.Heal.SpellLife.FirstOrDefault(i => item.SubItems[1].Text.Contains(i.Spell))))
+                                    {
+                                        if (!Core.Modules.Heal.RuneLife.Remove(Core.Modules.Heal.RuneLife.FirstOrDefault(i => item.SubItems[1].Text.Contains(i.Item.Name))))
+                                        {
+                                            if (!Core.Modules.Heal.PotionLife.Remove(Core.Modules.Heal.PotionLife.FirstOrDefault(i => item.SubItems[1].Text.Contains(i.Item.Name))))
+                                            {
+                                                Core.Modules.Heal.PotionMana.Remove(Core.Modules.Heal.PotionMana.FirstOrDefault(i => item.SubItems[1].Text.Contains(i.Item.Name)));
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
+                catch {}
             }
 
             while (uxList.SelectedItems.Count > 0)
@@ -291,6 +377,6 @@ namespace HardekSuite.Forms
                     e.SuppressKeyPress = true;
                 }
             }
-        }
+        }  
     }
 }

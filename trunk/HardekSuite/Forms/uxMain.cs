@@ -136,7 +136,12 @@ namespace HardekSuite.Forms
 
         private void uxChargerButton_Click(object sender, EventArgs e)
         {
-            Core.Modules.General.EnableLevelSpyKeys();
+            Core.Client.Input.SendKeys(Keys.F1);
+        }
+
+        private void uxLoadButton_Click(object sender, EventArgs e)
+        {
+            Core.Client.Input.SendKeys(Keys.F11);
         }
     }
 }

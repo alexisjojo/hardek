@@ -132,13 +132,13 @@
             this.ExitMenu});
             this.trayContextMenu.Name = "trayContextMenu";
             this.trayContextMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.trayContextMenu.Size = new System.Drawing.Size(104, 26);
+            this.trayContextMenu.Size = new System.Drawing.Size(93, 26);
             // 
             // ExitMenu
             // 
             this.ExitMenu.Image = global::HardekSuite.Properties.Resources.close;
             this.ExitMenu.Name = "ExitMenu";
-            this.ExitMenu.Size = new System.Drawing.Size(103, 22);
+            this.ExitMenu.Size = new System.Drawing.Size(92, 22);
             this.ExitMenu.Text = "Exit";
             this.ExitMenu.Click += new System.EventHandler(this.ExitMenu_Click);
             // 
@@ -167,9 +167,11 @@
             this.uxGeneralGroup.Name = "uxGeneralGroup";
             this.uxGeneralGroup.Size = new System.Drawing.Size(210, 46);
             this.uxGeneralGroup.TabIndex = 20;
+            this.uxGeneralGroup.Visible = false;
             // 
             // uxStatisticsButton
             // 
+            this.uxStatisticsButton.Enabled = false;
             this.uxStatisticsButton.Image = global::HardekSuite.Properties.Resources.statistics;
             this.uxStatisticsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.uxStatisticsButton.Location = new System.Drawing.Point(3, 3);
@@ -183,6 +185,7 @@
             // 
             // uxToolsButton
             // 
+            this.uxToolsButton.Enabled = false;
             this.uxToolsButton.Image = global::HardekSuite.Properties.Resources.tools;
             this.uxToolsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.uxToolsButton.Location = new System.Drawing.Point(108, 3);
@@ -258,9 +261,11 @@
             this.uxShortcutsGroup.Name = "uxShortcutsGroup";
             this.uxShortcutsGroup.Size = new System.Drawing.Size(210, 92);
             this.uxShortcutsGroup.TabIndex = 20;
+            this.uxShortcutsGroup.Visible = false;
             // 
             // uxCommandsButton
             // 
+            this.uxCommandsButton.Enabled = false;
             this.uxCommandsButton.Image = global::HardekSuite.Properties.Resources.commands;
             this.uxCommandsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.uxCommandsButton.Location = new System.Drawing.Point(3, 3);
@@ -274,6 +279,7 @@
             // 
             // uxHotkeysButton
             // 
+            this.uxHotkeysButton.Enabled = false;
             this.uxHotkeysButton.Image = global::HardekSuite.Properties.Resources.hotkeys;
             this.uxHotkeysButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.uxHotkeysButton.Location = new System.Drawing.Point(108, 3);
@@ -287,6 +293,7 @@
             // 
             // uxContextButton
             // 
+            this.uxContextButton.Enabled = false;
             this.uxContextButton.Image = global::HardekSuite.Properties.Resources.context;
             this.uxContextButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.uxContextButton.Location = new System.Drawing.Point(3, 49);
@@ -300,6 +307,7 @@
             // 
             // uxIconsButton
             // 
+            this.uxIconsButton.Enabled = false;
             this.uxIconsButton.Image = global::HardekSuite.Properties.Resources.icons;
             this.uxIconsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.uxIconsButton.Location = new System.Drawing.Point(108, 49);
@@ -379,6 +387,7 @@
             // 
             // uxChargerButton
             // 
+            this.uxChargerButton.Enabled = false;
             this.uxChargerButton.Image = global::HardekSuite.Properties.Resources.charger;
             this.uxChargerButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.uxChargerButton.Location = new System.Drawing.Point(108, 3);
@@ -393,6 +402,7 @@
             // 
             // uxCavebotButton
             // 
+            this.uxCavebotButton.Enabled = false;
             this.uxCavebotButton.Image = global::HardekSuite.Properties.Resources.cavebot;
             this.uxCavebotButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.uxCavebotButton.Location = new System.Drawing.Point(3, 49);
@@ -406,6 +416,7 @@
             // 
             // uxTargetingButton
             // 
+            this.uxTargetingButton.Enabled = false;
             this.uxTargetingButton.Image = global::HardekSuite.Properties.Resources.targeting;
             this.uxTargetingButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.uxTargetingButton.Location = new System.Drawing.Point(108, 49);
@@ -422,6 +433,7 @@
             // 
             this.uxLooterButton.BackgroundImage = global::HardekSuite.Properties.Resources.looter_background;
             this.uxLooterButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.uxLooterButton.Enabled = false;
             this.uxLooterButton.Image = global::HardekSuite.Properties.Resources.looter;
             this.uxLooterButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.uxLooterButton.Location = new System.Drawing.Point(3, 95);
@@ -436,6 +448,7 @@
             // 
             // uxMakerButton
             // 
+            this.uxMakerButton.Enabled = false;
             this.uxMakerButton.Image = global::HardekSuite.Properties.Resources.maker;
             this.uxMakerButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.uxMakerButton.Location = new System.Drawing.Point(108, 95);
@@ -495,6 +508,7 @@
             this.uxSettingsGroup.Name = "uxSettingsGroup";
             this.uxSettingsGroup.Size = new System.Drawing.Size(210, 66);
             this.uxSettingsGroup.TabIndex = 20;
+            this.uxSettingsGroup.Visible = false;
             // 
             // uxSettingsTab
             // 
@@ -504,6 +518,7 @@
             this.uxSettingsTab.Controls.Add(this.uxTab4);
             this.uxSettingsTab.Controls.Add(this.uxTab5);
             this.uxSettingsTab.Controls.Add(this.uxTabCustom);
+            this.uxSettingsTab.Enabled = false;
             this.uxSettingsTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uxSettingsTab.Location = new System.Drawing.Point(1, 1);
             this.uxSettingsTab.Margin = new System.Windows.Forms.Padding(1);
@@ -574,6 +589,7 @@
             // 
             // uxSaveButton
             // 
+            this.uxSaveButton.Enabled = false;
             this.uxSaveButton.Image = global::HardekSuite.Properties.Resources.save;
             this.uxSaveButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.uxSaveButton.Location = new System.Drawing.Point(3, 23);
@@ -587,6 +603,7 @@
             // 
             // uxLoadButton
             // 
+            this.uxLoadButton.Enabled = false;
             this.uxLoadButton.Image = global::HardekSuite.Properties.Resources.load;
             this.uxLoadButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.uxLoadButton.Location = new System.Drawing.Point(108, 23);
@@ -597,6 +614,7 @@
             this.uxLoadButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.uxLoadButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.uxLoadButton.UseVisualStyleBackColor = true;
+            this.uxLoadButton.Click += new System.EventHandler(this.uxLoadButton_Click);
             // 
             // uxToggleSettings
             // 
