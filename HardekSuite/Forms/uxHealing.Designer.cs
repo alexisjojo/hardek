@@ -24,9 +24,9 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("Health", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("Mana", System.Windows.Forms.HorizontalAlignment.Left);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uxHealing));
+            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Health", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Mana", System.Windows.Forms.HorizontalAlignment.Left);
             this.potionExhaustionText = new System.Windows.Forms.TextBox();
             this.potionExhaustionLabel = new System.Windows.Forms.Label();
             this.spellExhaustionLabel = new System.Windows.Forms.Label();
@@ -35,14 +35,34 @@
             this.antidoteCheck = new System.Windows.Forms.CheckBox();
             this.uxHealthMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.uxItemHealth = new System.Windows.Forms.ToolStripMenuItem();
+            this.uxUHHealth = new System.Windows.Forms.ToolStripMenuItem();
+            this.uxIHHealth = new System.Windows.Forms.ToolStripMenuItem();
+            this.uxSmallHealthPotion = new System.Windows.Forms.ToolStripMenuItem();
+            this.uxHealthPotion = new System.Windows.Forms.ToolStripMenuItem();
+            this.uxStrongHealthPotion = new System.Windows.Forms.ToolStripMenuItem();
+            this.uxGreatHealthPotion = new System.Windows.Forms.ToolStripMenuItem();
+            this.uxUltimateHealthPotion = new System.Windows.Forms.ToolStripMenuItem();
+            this.uxHealthSpiritPotion = new System.Windows.Forms.ToolStripMenuItem();
             this.uxSpellHealth = new System.Windows.Forms.ToolStripMenuItem();
             this.uxSpellWords = new System.Windows.Forms.ToolStripTextBox();
             this.uxSpellMana = new System.Windows.Forms.ToolStripTextBox();
+            this.uxAddSpellHealth = new System.Windows.Forms.ToolStripMenuItem();
+            this.uxKeyHealth = new System.Windows.Forms.ToolStripMenuItem();
+            this.uxSeletKeyHealth = new System.Windows.Forms.ToolStripComboBox();
+            this.uxKeyManaCost = new System.Windows.Forms.ToolStripTextBox();
+            this.uxAddKeyHealth = new System.Windows.Forms.ToolStripMenuItem();
             this.uxHealthAdd = new System.Windows.Forms.Button();
             this.uxPercent = new System.Windows.Forms.HScrollBar();
             this.uxManaAdd = new System.Windows.Forms.Button();
             this.uxManaMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.uxItemMana = new System.Windows.Forms.ToolStripMenuItem();
+            this.uxManaPotion = new System.Windows.Forms.ToolStripMenuItem();
+            this.uxStrongManaPotion = new System.Windows.Forms.ToolStripMenuItem();
+            this.uxGreatManaPotion = new System.Windows.Forms.ToolStripMenuItem();
+            this.uxManaSpiritPotion = new System.Windows.Forms.ToolStripMenuItem();
+            this.uxKeyMana = new System.Windows.Forms.ToolStripMenuItem();
+            this.uxSelectKeyMana = new System.Windows.Forms.ToolStripComboBox();
+            this.uxAddKeyMana = new System.Windows.Forms.ToolStripMenuItem();
             this.uxLabelPercent = new System.Windows.Forms.Label();
             this.uxOptions = new System.Windows.Forms.GroupBox();
             this.uxEnable = new System.Windows.Forms.CheckBox();
@@ -52,26 +72,6 @@
             this.uxColumnAction = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.uxColumnMana = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.uxClear = new System.Windows.Forms.Button();
-            this.uxKeyHealth = new System.Windows.Forms.ToolStripMenuItem();
-            this.uxSeletKeyHealth = new System.Windows.Forms.ToolStripComboBox();
-            this.uxKeyMana = new System.Windows.Forms.ToolStripMenuItem();
-            this.uxSelectKeyMana = new System.Windows.Forms.ToolStripComboBox();
-            this.uxKeyManaCost = new System.Windows.Forms.ToolStripTextBox();
-            this.uxUHHealth = new System.Windows.Forms.ToolStripMenuItem();
-            this.uxIHHealth = new System.Windows.Forms.ToolStripMenuItem();
-            this.uxSmallHealthPotion = new System.Windows.Forms.ToolStripMenuItem();
-            this.uxHealthPotion = new System.Windows.Forms.ToolStripMenuItem();
-            this.uxStrongHealthPotion = new System.Windows.Forms.ToolStripMenuItem();
-            this.uxGreatHealthPotion = new System.Windows.Forms.ToolStripMenuItem();
-            this.uxUltimateHealthPotion = new System.Windows.Forms.ToolStripMenuItem();
-            this.uxHealthSpiritPotion = new System.Windows.Forms.ToolStripMenuItem();
-            this.uxAddSpellHealth = new System.Windows.Forms.ToolStripMenuItem();
-            this.uxAddKeyHealth = new System.Windows.Forms.ToolStripMenuItem();
-            this.uxManaPotion = new System.Windows.Forms.ToolStripMenuItem();
-            this.uxStrongManaPotion = new System.Windows.Forms.ToolStripMenuItem();
-            this.uxGreatManaPotion = new System.Windows.Forms.ToolStripMenuItem();
-            this.uxManaSpiritPotion = new System.Windows.Forms.ToolStripMenuItem();
-            this.uxAddKeyMana = new System.Windows.Forms.ToolStripMenuItem();
             this.uxHealthMenu.SuspendLayout();
             this.uxManaMenu.SuspendLayout();
             this.uxOptions.SuspendLayout();
@@ -166,314 +166,6 @@
             this.uxItemHealth.Text = "Item";
             this.uxItemHealth.Visible = false;
             // 
-            // uxSpellHealth
-            // 
-            this.uxSpellHealth.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.uxSpellWords,
-            this.uxSpellMana,
-            this.uxAddSpellHealth});
-            this.uxSpellHealth.Enabled = false;
-            this.uxSpellHealth.Name = "uxSpellHealth";
-            this.uxSpellHealth.Size = new System.Drawing.Size(152, 22);
-            this.uxSpellHealth.Text = "Spell";
-            this.uxSpellHealth.Visible = false;
-            // 
-            // uxSpellWords
-            // 
-            this.uxSpellWords.Enabled = false;
-            this.uxSpellWords.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.uxSpellWords.Name = "uxSpellWords";
-            this.uxSpellWords.Size = new System.Drawing.Size(100, 23);
-            this.uxSpellWords.Tag = "Spell";
-            this.uxSpellWords.Text = "Spell";
-            this.uxSpellWords.Visible = false;
-            this.uxSpellWords.Enter += new System.EventHandler(this.spellHealth_Enter);
-            this.uxSpellWords.Leave += new System.EventHandler(this.spellHealth_Leave);
-            this.uxSpellWords.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.spellHealth_KeyPress);
-            // 
-            // uxSpellMana
-            // 
-            this.uxSpellMana.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.uxSpellMana.Name = "uxSpellMana";
-            this.uxSpellMana.Size = new System.Drawing.Size(100, 23);
-            this.uxSpellMana.Tag = "Mana Cost";
-            this.uxSpellMana.Text = "Mana Cost";
-            this.uxSpellMana.Enter += new System.EventHandler(this.spellHealth_Enter);
-            this.uxSpellMana.Leave += new System.EventHandler(this.spellHealth_Leave);
-            this.uxSpellMana.KeyDown += new System.Windows.Forms.KeyEventHandler(this.uxSpellMana_KeyDown);
-            // 
-            // uxHealthAdd
-            // 
-            this.uxHealthAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxHealthAdd.ForeColor = System.Drawing.Color.Firebrick;
-            this.uxHealthAdd.Location = new System.Drawing.Point(12, 251);
-            this.uxHealthAdd.Name = "uxHealthAdd";
-            this.uxHealthAdd.Size = new System.Drawing.Size(98, 23);
-            this.uxHealthAdd.TabIndex = 10;
-            this.uxHealthAdd.Text = "Add Health";
-            this.uxHealthAdd.UseVisualStyleBackColor = true;
-            this.uxHealthAdd.Click += new System.EventHandler(this.addHealthButton_Click);
-            // 
-            // uxPercent
-            // 
-            this.uxPercent.LargeChange = 5;
-            this.uxPercent.Location = new System.Drawing.Point(12, 235);
-            this.uxPercent.Name = "uxPercent";
-            this.uxPercent.Size = new System.Drawing.Size(254, 13);
-            this.uxPercent.TabIndex = 1;
-            this.uxPercent.Value = 50;
-            this.uxPercent.Scroll += new System.Windows.Forms.ScrollEventHandler(this.uxPercent_Scroll);
-            // 
-            // uxManaAdd
-            // 
-            this.uxManaAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxManaAdd.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.uxManaAdd.Location = new System.Drawing.Point(168, 251);
-            this.uxManaAdd.Name = "uxManaAdd";
-            this.uxManaAdd.Size = new System.Drawing.Size(98, 23);
-            this.uxManaAdd.TabIndex = 11;
-            this.uxManaAdd.Text = "Add Mana";
-            this.uxManaAdd.UseVisualStyleBackColor = true;
-            this.uxManaAdd.Click += new System.EventHandler(this.uxMana_Click);
-            // 
-            // uxManaMenu
-            // 
-            this.uxManaMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.uxItemMana,
-            this.uxKeyMana});
-            this.uxManaMenu.Name = "addHealthMenu";
-            this.uxManaMenu.Size = new System.Drawing.Size(113, 48);
-            // 
-            // uxItemMana
-            // 
-            this.uxItemMana.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.uxManaPotion,
-            this.uxStrongManaPotion,
-            this.uxGreatManaPotion,
-            this.uxManaSpiritPotion});
-            this.uxItemMana.Enabled = false;
-            this.uxItemMana.Name = "uxItemMana";
-            this.uxItemMana.Size = new System.Drawing.Size(112, 22);
-            this.uxItemMana.Text = "Item";
-            this.uxItemMana.Visible = false;
-            // 
-            // uxLabelPercent
-            // 
-            this.uxLabelPercent.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxLabelPercent.Location = new System.Drawing.Point(116, 251);
-            this.uxLabelPercent.Name = "uxLabelPercent";
-            this.uxLabelPercent.Size = new System.Drawing.Size(46, 23);
-            this.uxLabelPercent.TabIndex = 12;
-            this.uxLabelPercent.Text = "50%";
-            this.uxLabelPercent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // uxOptions
-            // 
-            this.uxOptions.Controls.Add(this.spellExhaustionLabel);
-            this.uxOptions.Controls.Add(this.antidoteCheck);
-            this.uxOptions.Controls.Add(this.potionExhaustionLabel);
-            this.uxOptions.Controls.Add(this.uxEnable);
-            this.uxOptions.Controls.Add(this.paralyzeCheck);
-            this.uxOptions.Controls.Add(this.spellExhaustionText);
-            this.uxOptions.Controls.Add(this.potionExhaustionText);
-            this.uxOptions.Location = new System.Drawing.Point(12, 309);
-            this.uxOptions.Name = "uxOptions";
-            this.uxOptions.Size = new System.Drawing.Size(254, 91);
-            this.uxOptions.TabIndex = 13;
-            this.uxOptions.TabStop = false;
-            this.uxOptions.Text = "Options";
-            // 
-            // uxEnable
-            // 
-            this.uxEnable.AutoSize = true;
-            this.uxEnable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxEnable.Location = new System.Drawing.Point(178, 65);
-            this.uxEnable.Name = "uxEnable";
-            this.uxEnable.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.uxEnable.Size = new System.Drawing.Size(70, 20);
-            this.uxEnable.TabIndex = 16;
-            this.uxEnable.Text = "Enable";
-            this.uxEnable.UseVisualStyleBackColor = true;
-            this.uxEnable.CheckedChanged += new System.EventHandler(this.uxEnable_CheckedChanged);
-            // 
-            // uxDelete
-            // 
-            this.uxDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxDelete.Location = new System.Drawing.Point(12, 280);
-            this.uxDelete.Name = "uxDelete";
-            this.uxDelete.Size = new System.Drawing.Size(124, 23);
-            this.uxDelete.TabIndex = 14;
-            this.uxDelete.Text = "Delete Selected";
-            this.uxDelete.UseVisualStyleBackColor = true;
-            this.uxDelete.Click += new System.EventHandler(this.uxDelete_Click);
-            // 
-            // uxList
-            // 
-            this.uxList.AllowColumnReorder = true;
-            this.uxList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.uxColumnPercent,
-            this.uxColumnAction,
-            this.uxColumnMana});
-            this.uxList.FullRowSelect = true;
-            this.uxList.GridLines = true;
-            listViewGroup3.Header = "Health";
-            listViewGroup3.Name = "uxGroupHealth";
-            listViewGroup4.Header = "Mana";
-            listViewGroup4.Name = "uxGroupMana";
-            this.uxList.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup3,
-            listViewGroup4});
-            this.uxList.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.uxList.Location = new System.Drawing.Point(12, 12);
-            this.uxList.Name = "uxList";
-            this.uxList.Size = new System.Drawing.Size(254, 220);
-            this.uxList.Sorting = System.Windows.Forms.SortOrder.Descending;
-            this.uxList.TabIndex = 1;
-            this.uxList.UseCompatibleStateImageBehavior = false;
-            this.uxList.View = System.Windows.Forms.View.Details;
-            // 
-            // uxColumnPercent
-            // 
-            this.uxColumnPercent.DisplayIndex = 1;
-            this.uxColumnPercent.Text = "Percent";
-            this.uxColumnPercent.Width = 50;
-            // 
-            // uxColumnAction
-            // 
-            this.uxColumnAction.DisplayIndex = 0;
-            this.uxColumnAction.Text = "Action";
-            this.uxColumnAction.Width = 142;
-            // 
-            // uxColumnMana
-            // 
-            this.uxColumnMana.Text = "Mana";
-            this.uxColumnMana.Width = 50;
-            // 
-            // uxClear
-            // 
-            this.uxClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uxClear.Location = new System.Drawing.Point(142, 280);
-            this.uxClear.Name = "uxClear";
-            this.uxClear.Size = new System.Drawing.Size(124, 23);
-            this.uxClear.TabIndex = 15;
-            this.uxClear.Text = "Clear List";
-            this.uxClear.UseVisualStyleBackColor = true;
-            this.uxClear.Click += new System.EventHandler(this.uxClear_Click);
-            // 
-            // uxKeyHealth
-            // 
-            this.uxKeyHealth.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.uxSeletKeyHealth,
-            this.uxKeyManaCost,
-            this.uxAddKeyHealth});
-            this.uxKeyHealth.Name = "uxKeyHealth";
-            this.uxKeyHealth.Size = new System.Drawing.Size(152, 22);
-            this.uxKeyHealth.Text = "Hotkey";
-            // 
-            // uxSeletKeyHealth
-            // 
-            this.uxSeletKeyHealth.Items.AddRange(new object[] {
-            "F1",
-            "F2",
-            "F3",
-            "F4",
-            "F5",
-            "F6",
-            "F7",
-            "F8",
-            "F9",
-            "F10",
-            "F11",
-            "F12",
-            "Control + F1",
-            "Control + F2",
-            "Control + F3",
-            "Control + F4",
-            "Control + F5",
-            "Control + F6",
-            "Control + F7",
-            "Control + F8",
-            "Control + F9",
-            "Control + F10",
-            "Control + F11",
-            "Control + F12",
-            "Shift + F1",
-            "Shift + F2",
-            "Shift + F3",
-            "Shift + F4",
-            "Shift + F5",
-            "Shift + F6",
-            "Shift + F7",
-            "Shift + F8",
-            "Shift + F9",
-            "Shift + F10",
-            "Shift + F11",
-            "Shift + F12"});
-            this.uxSeletKeyHealth.Name = "uxSeletKeyHealth";
-            this.uxSeletKeyHealth.Size = new System.Drawing.Size(121, 23);
-            this.uxSeletKeyHealth.Text = "Hotkey to use";
-            // 
-            // uxKeyMana
-            // 
-            this.uxKeyMana.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.uxSelectKeyMana,
-            this.uxAddKeyMana});
-            this.uxKeyMana.Name = "uxKeyMana";
-            this.uxKeyMana.Size = new System.Drawing.Size(112, 22);
-            this.uxKeyMana.Text = "Hotkey";
-            // 
-            // uxSelectKeyMana
-            // 
-            this.uxSelectKeyMana.Items.AddRange(new object[] {
-            "F1",
-            "F2",
-            "F3",
-            "F4",
-            "F5",
-            "F6",
-            "F7",
-            "F8",
-            "F9",
-            "F10",
-            "F11",
-            "F12",
-            "Control + F1",
-            "Control + F2",
-            "Control + F3",
-            "Control + F4",
-            "Control + F5",
-            "Control + F6",
-            "Control + F7",
-            "Control + F8",
-            "Control + F9",
-            "Control + F10",
-            "Control + F11",
-            "Control + F12",
-            "Shift + F1",
-            "Shift + F2",
-            "Shift + F3",
-            "Shift + F4",
-            "Shift + F5",
-            "Shift + F6",
-            "Shift + F7",
-            "Shift + F8",
-            "Shift + F9",
-            "Shift + F10",
-            "Shift + F11",
-            "Shift + F12"});
-            this.uxSelectKeyMana.Name = "uxSelectKeyMana";
-            this.uxSelectKeyMana.Size = new System.Drawing.Size(121, 23);
-            this.uxSelectKeyMana.Text = "Hotkey to use";
-            // 
-            // uxKeyManaCost
-            // 
-            this.uxKeyManaCost.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.uxKeyManaCost.Name = "uxKeyManaCost";
-            this.uxKeyManaCost.Size = new System.Drawing.Size(100, 23);
-            this.uxKeyManaCost.Tag = "Mana Cost";
-            this.uxKeyManaCost.Text = "Mana Cost";
-            this.uxKeyManaCost.Leave += new System.EventHandler(this.uxKeyManaCost_Leave);
-            // 
             // uxUHHealth
             // 
             this.uxUHHealth.Enabled = false;
@@ -562,6 +254,42 @@
             this.uxHealthSpiritPotion.Visible = false;
             this.uxHealthSpiritPotion.Click += new System.EventHandler(this.addHealth);
             // 
+            // uxSpellHealth
+            // 
+            this.uxSpellHealth.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.uxSpellWords,
+            this.uxSpellMana,
+            this.uxAddSpellHealth});
+            this.uxSpellHealth.Enabled = false;
+            this.uxSpellHealth.Name = "uxSpellHealth";
+            this.uxSpellHealth.Size = new System.Drawing.Size(152, 22);
+            this.uxSpellHealth.Text = "Spell";
+            this.uxSpellHealth.Visible = false;
+            // 
+            // uxSpellWords
+            // 
+            this.uxSpellWords.Enabled = false;
+            this.uxSpellWords.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.uxSpellWords.Name = "uxSpellWords";
+            this.uxSpellWords.Size = new System.Drawing.Size(100, 23);
+            this.uxSpellWords.Tag = "Spell";
+            this.uxSpellWords.Text = "Spell";
+            this.uxSpellWords.Visible = false;
+            this.uxSpellWords.Enter += new System.EventHandler(this.spellHealth_Enter);
+            this.uxSpellWords.Leave += new System.EventHandler(this.spellHealth_Leave);
+            this.uxSpellWords.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.spellHealth_KeyPress);
+            // 
+            // uxSpellMana
+            // 
+            this.uxSpellMana.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.uxSpellMana.Name = "uxSpellMana";
+            this.uxSpellMana.Size = new System.Drawing.Size(100, 23);
+            this.uxSpellMana.Tag = "Mana Cost";
+            this.uxSpellMana.Text = "Mana Cost";
+            this.uxSpellMana.Enter += new System.EventHandler(this.spellHealth_Enter);
+            this.uxSpellMana.Leave += new System.EventHandler(this.spellHealth_Leave);
+            this.uxSpellMana.KeyDown += new System.Windows.Forms.KeyEventHandler(this.uxSpellMana_KeyDown);
+            // 
             // uxAddSpellHealth
             // 
             this.uxAddSpellHealth.Image = ((System.Drawing.Image)(resources.GetObject("uxAddSpellHealth.Image")));
@@ -571,6 +299,69 @@
             this.uxAddSpellHealth.Text = "Add";
             this.uxAddSpellHealth.Click += new System.EventHandler(this.addHealth);
             // 
+            // uxKeyHealth
+            // 
+            this.uxKeyHealth.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.uxSeletKeyHealth,
+            this.uxKeyManaCost,
+            this.uxAddKeyHealth});
+            this.uxKeyHealth.Name = "uxKeyHealth";
+            this.uxKeyHealth.Size = new System.Drawing.Size(152, 22);
+            this.uxKeyHealth.Text = "Hotkey";
+            // 
+            // uxSeletKeyHealth
+            // 
+            this.uxSeletKeyHealth.Items.AddRange(new object[] {
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F6",
+            "F7",
+            "F8",
+            "F9",
+            "F10",
+            "F11",
+            "F12",
+            "Control + F1",
+            "Control + F2",
+            "Control + F3",
+            "Control + F4",
+            "Control + F5",
+            "Control + F6",
+            "Control + F7",
+            "Control + F8",
+            "Control + F9",
+            "Control + F10",
+            "Control + F11",
+            "Control + F12",
+            "Shift + F1",
+            "Shift + F2",
+            "Shift + F3",
+            "Shift + F4",
+            "Shift + F5",
+            "Shift + F6",
+            "Shift + F7",
+            "Shift + F8",
+            "Shift + F9",
+            "Shift + F10",
+            "Shift + F11",
+            "Shift + F12"});
+            this.uxSeletKeyHealth.Name = "uxSeletKeyHealth";
+            this.uxSeletKeyHealth.Size = new System.Drawing.Size(121, 23);
+            this.uxSeletKeyHealth.Text = "Hotkey to use";
+            // 
+            // uxKeyManaCost
+            // 
+            this.uxKeyManaCost.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.uxKeyManaCost.Name = "uxKeyManaCost";
+            this.uxKeyManaCost.Size = new System.Drawing.Size(100, 23);
+            this.uxKeyManaCost.Tag = "Mana Cost";
+            this.uxKeyManaCost.Text = "Mana Cost";
+            this.uxKeyManaCost.Enter += new System.EventHandler(this.uxKeyManaCost_Enter);
+            this.uxKeyManaCost.Leave += new System.EventHandler(this.uxKeyManaCost_Leave);
+            // 
             // uxAddKeyHealth
             // 
             this.uxAddKeyHealth.Image = ((System.Drawing.Image)(resources.GetObject("uxAddKeyHealth.Image")));
@@ -579,6 +370,61 @@
             this.uxAddKeyHealth.Size = new System.Drawing.Size(197, 38);
             this.uxAddKeyHealth.Text = "Add";
             this.uxAddKeyHealth.Click += new System.EventHandler(this.addHealth);
+            // 
+            // uxHealthAdd
+            // 
+            this.uxHealthAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxHealthAdd.ForeColor = System.Drawing.Color.Firebrick;
+            this.uxHealthAdd.Location = new System.Drawing.Point(12, 251);
+            this.uxHealthAdd.Name = "uxHealthAdd";
+            this.uxHealthAdd.Size = new System.Drawing.Size(98, 23);
+            this.uxHealthAdd.TabIndex = 10;
+            this.uxHealthAdd.Text = "Add Health";
+            this.uxHealthAdd.UseVisualStyleBackColor = true;
+            this.uxHealthAdd.Click += new System.EventHandler(this.addHealthButton_Click);
+            // 
+            // uxPercent
+            // 
+            this.uxPercent.LargeChange = 5;
+            this.uxPercent.Location = new System.Drawing.Point(12, 235);
+            this.uxPercent.Name = "uxPercent";
+            this.uxPercent.Size = new System.Drawing.Size(254, 13);
+            this.uxPercent.TabIndex = 1;
+            this.uxPercent.Value = 50;
+            this.uxPercent.Scroll += new System.Windows.Forms.ScrollEventHandler(this.uxPercent_Scroll);
+            // 
+            // uxManaAdd
+            // 
+            this.uxManaAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxManaAdd.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.uxManaAdd.Location = new System.Drawing.Point(168, 251);
+            this.uxManaAdd.Name = "uxManaAdd";
+            this.uxManaAdd.Size = new System.Drawing.Size(98, 23);
+            this.uxManaAdd.TabIndex = 11;
+            this.uxManaAdd.Text = "Add Mana";
+            this.uxManaAdd.UseVisualStyleBackColor = true;
+            this.uxManaAdd.Click += new System.EventHandler(this.uxMana_Click);
+            // 
+            // uxManaMenu
+            // 
+            this.uxManaMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.uxItemMana,
+            this.uxKeyMana});
+            this.uxManaMenu.Name = "addHealthMenu";
+            this.uxManaMenu.Size = new System.Drawing.Size(113, 48);
+            // 
+            // uxItemMana
+            // 
+            this.uxItemMana.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.uxManaPotion,
+            this.uxStrongManaPotion,
+            this.uxGreatManaPotion,
+            this.uxManaSpiritPotion});
+            this.uxItemMana.Enabled = false;
+            this.uxItemMana.Name = "uxItemMana";
+            this.uxItemMana.Size = new System.Drawing.Size(112, 22);
+            this.uxItemMana.Text = "Item";
+            this.uxItemMana.Visible = false;
             // 
             // uxManaPotion
             // 
@@ -624,6 +470,58 @@
             this.uxManaSpiritPotion.Visible = false;
             this.uxManaSpiritPotion.Click += new System.EventHandler(this.addMana);
             // 
+            // uxKeyMana
+            // 
+            this.uxKeyMana.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.uxSelectKeyMana,
+            this.uxAddKeyMana});
+            this.uxKeyMana.Name = "uxKeyMana";
+            this.uxKeyMana.Size = new System.Drawing.Size(112, 22);
+            this.uxKeyMana.Text = "Hotkey";
+            // 
+            // uxSelectKeyMana
+            // 
+            this.uxSelectKeyMana.Items.AddRange(new object[] {
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F5",
+            "F6",
+            "F7",
+            "F8",
+            "F9",
+            "F10",
+            "F11",
+            "F12",
+            "Control + F1",
+            "Control + F2",
+            "Control + F3",
+            "Control + F4",
+            "Control + F5",
+            "Control + F6",
+            "Control + F7",
+            "Control + F8",
+            "Control + F9",
+            "Control + F10",
+            "Control + F11",
+            "Control + F12",
+            "Shift + F1",
+            "Shift + F2",
+            "Shift + F3",
+            "Shift + F4",
+            "Shift + F5",
+            "Shift + F6",
+            "Shift + F7",
+            "Shift + F8",
+            "Shift + F9",
+            "Shift + F10",
+            "Shift + F11",
+            "Shift + F12"});
+            this.uxSelectKeyMana.Name = "uxSelectKeyMana";
+            this.uxSelectKeyMana.Size = new System.Drawing.Size(121, 23);
+            this.uxSelectKeyMana.Text = "Hotkey to use";
+            // 
             // uxAddKeyMana
             // 
             this.uxAddKeyMana.Image = ((System.Drawing.Image)(resources.GetObject("uxAddKeyMana.Image")));
@@ -632,6 +530,109 @@
             this.uxAddKeyMana.Size = new System.Drawing.Size(197, 38);
             this.uxAddKeyMana.Text = "Add";
             this.uxAddKeyMana.Click += new System.EventHandler(this.addMana);
+            // 
+            // uxLabelPercent
+            // 
+            this.uxLabelPercent.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxLabelPercent.Location = new System.Drawing.Point(116, 251);
+            this.uxLabelPercent.Name = "uxLabelPercent";
+            this.uxLabelPercent.Size = new System.Drawing.Size(46, 23);
+            this.uxLabelPercent.TabIndex = 12;
+            this.uxLabelPercent.Text = "50%";
+            this.uxLabelPercent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // uxOptions
+            // 
+            this.uxOptions.Controls.Add(this.spellExhaustionLabel);
+            this.uxOptions.Controls.Add(this.antidoteCheck);
+            this.uxOptions.Controls.Add(this.potionExhaustionLabel);
+            this.uxOptions.Controls.Add(this.uxEnable);
+            this.uxOptions.Controls.Add(this.paralyzeCheck);
+            this.uxOptions.Controls.Add(this.spellExhaustionText);
+            this.uxOptions.Controls.Add(this.potionExhaustionText);
+            this.uxOptions.Location = new System.Drawing.Point(12, 309);
+            this.uxOptions.Name = "uxOptions";
+            this.uxOptions.Size = new System.Drawing.Size(254, 91);
+            this.uxOptions.TabIndex = 13;
+            this.uxOptions.TabStop = false;
+            this.uxOptions.Text = "Options";
+            // 
+            // uxEnable
+            // 
+            this.uxEnable.AutoSize = true;
+            this.uxEnable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxEnable.Location = new System.Drawing.Point(178, 65);
+            this.uxEnable.Name = "uxEnable";
+            this.uxEnable.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.uxEnable.Size = new System.Drawing.Size(70, 20);
+            this.uxEnable.TabIndex = 16;
+            this.uxEnable.Text = "Enable";
+            this.uxEnable.UseVisualStyleBackColor = true;
+            this.uxEnable.CheckedChanged += new System.EventHandler(this.uxEnable_CheckedChanged);
+            // 
+            // uxDelete
+            // 
+            this.uxDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxDelete.Location = new System.Drawing.Point(12, 280);
+            this.uxDelete.Name = "uxDelete";
+            this.uxDelete.Size = new System.Drawing.Size(124, 23);
+            this.uxDelete.TabIndex = 14;
+            this.uxDelete.Text = "Delete Selected";
+            this.uxDelete.UseVisualStyleBackColor = true;
+            this.uxDelete.Click += new System.EventHandler(this.uxDelete_Click);
+            // 
+            // uxList
+            // 
+            this.uxList.AllowColumnReorder = true;
+            this.uxList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.uxColumnPercent,
+            this.uxColumnAction,
+            this.uxColumnMana});
+            this.uxList.FullRowSelect = true;
+            this.uxList.GridLines = true;
+            listViewGroup1.Header = "Health";
+            listViewGroup1.Name = "uxGroupHealth";
+            listViewGroup2.Header = "Mana";
+            listViewGroup2.Name = "uxGroupMana";
+            this.uxList.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
+            listViewGroup1,
+            listViewGroup2});
+            this.uxList.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.uxList.Location = new System.Drawing.Point(12, 12);
+            this.uxList.Name = "uxList";
+            this.uxList.Size = new System.Drawing.Size(254, 220);
+            this.uxList.Sorting = System.Windows.Forms.SortOrder.Descending;
+            this.uxList.TabIndex = 1;
+            this.uxList.UseCompatibleStateImageBehavior = false;
+            this.uxList.View = System.Windows.Forms.View.Details;
+            // 
+            // uxColumnPercent
+            // 
+            this.uxColumnPercent.DisplayIndex = 1;
+            this.uxColumnPercent.Text = "Percent";
+            this.uxColumnPercent.Width = 50;
+            // 
+            // uxColumnAction
+            // 
+            this.uxColumnAction.DisplayIndex = 0;
+            this.uxColumnAction.Text = "Action";
+            this.uxColumnAction.Width = 142;
+            // 
+            // uxColumnMana
+            // 
+            this.uxColumnMana.Text = "Mana";
+            this.uxColumnMana.Width = 50;
+            // 
+            // uxClear
+            // 
+            this.uxClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uxClear.Location = new System.Drawing.Point(142, 280);
+            this.uxClear.Name = "uxClear";
+            this.uxClear.Size = new System.Drawing.Size(124, 23);
+            this.uxClear.TabIndex = 15;
+            this.uxClear.Text = "Clear List";
+            this.uxClear.UseVisualStyleBackColor = true;
+            this.uxClear.Click += new System.EventHandler(this.uxClear_Click);
             // 
             // uxHealing
             // 
