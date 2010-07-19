@@ -121,17 +121,6 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="uxAddKeyHealth.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        R0lGODlhIAAgAIIAAGho/8HB/wAA1/f3/////wAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEBAAAh+QQB
-        AAAEACwAAAAAIAAgAAAInQAJCBxIsKDBgwgLAkjIsCGAAAsbSjQYEWHFiRYNBsA48CKBhxUfDoCIEaRC
-        jRwFesyYsqXLlQxhHtxIESHNmioDjPR4s6NOkgRNDuz58edKoh1Pojwos6TLp1AnCpC4sikBAQCmJhQ6
-        tKHWmEGNBo3atSDSl2F3GvzKtOFZrGzNOkQY16dasksL1r3KcSVcvVnJ7t2Lt7Dhw4gJBgQAOw==
-</value>
-  </data>
-  <metadata name="uxManaMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>146, 17</value>
-  </metadata>
   <data name="uxUHHealth.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         R0lGODlhIAAgAIcAAAkJJwgIJQICEwQEGgYGIAICEgQEGAYGHwIEBgMDFgAADQIDBQEBASxThgMDGCtR
@@ -344,6 +333,17 @@
         tKHWmEGNBo3atSDSl2F3GvzKtOFZrGzNOkQY16dasksL1r3KcSVcvVnJ7t2Lt7Dhw4gJBgQAOw==
 </value>
   </data>
+  <data name="uxAddKeyHealth.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        R0lGODlhIAAgAIIAAGho/8HB/wAA1/f3/////wAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEBAAAh+QQB
+        AAAEACwAAAAAIAAgAAAInQAJCBxIsKDBgwgLAkjIsCGAAAsbSjQYEWHFiRYNBsA48CKBhxUfDoCIEaRC
+        jRwFesyYsqXLlQxhHtxIESHNmioDjPR4s6NOkgRNDuz58edKoh1Pojwos6TLp1AnCpC4sikBAQCmJhQ6
+        tKHWmEGNBo3atSDSl2F3GvzKtOFZrGzNOkQY16dasksL1r3KcSVcvVnJ7t2Lt7Dhw4gJBgQAOw==
+</value>
+  </data>
+  <metadata name="uxManaMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>146, 17</value>
+  </metadata>
   <data name="uxManaPotion.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         R0lGODlhIAAgAIYAAP///wAAGAgAAAAAAAAIAIQAc1oAShgYGGMAUgAQAP+1WnsAaxgAEFoAUkopAHNz
