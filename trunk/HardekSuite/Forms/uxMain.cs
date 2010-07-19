@@ -133,6 +133,11 @@ namespace HardekSuite.Forms
                 TopMost = true;
             }
         }
+
+        private void uxChargerButton_Click(object sender, EventArgs e)
+        {
+            Core.Modules.General.EnableLevelSpyKeys();
+        }
     }
 }
 
